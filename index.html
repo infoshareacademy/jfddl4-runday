@@ -11,12 +11,18 @@
 <div id="container">
     <!--top navigation start - sticky navbar -->
     <nav id="top-nav">
+
+        <figure class="logo-main">
+            <img src="#" alt="">
+        </figure>
+
+
         <ol>
-            <li><a href="#product">Functions</a></li>
-            <li><a href="#opening-entry">Entry</a></li>
-            <li><a href="#authors">Author</a></li>
-            <li><a href="#authors">Author</a></li>
-            <li><a href="#authors">Author</a></li>
+            <li><a class='button--nav-main' href="#product">Functions</a></li>
+            <li><a class='button--nav-main' href="#opening-entry">Entry</a></li>
+            <li><a class='button--nav-main' href="#authors">Author</a></li>
+            <li><a class='button--nav-main' href="#authors">Author</a></li>
+            <li><a class='button--nav-main' href="#authors">Author</a></li>
         </ol>
 
     </nav>
@@ -24,7 +30,7 @@
 
     <main>
 
-        <!--sekcja hero start - information product-->
+        <!-- hero section start - information product-->
         <section id="hero">
 
 
@@ -59,16 +65,13 @@
 </div>
 
 
-
-
-
 <!-- sticky navbar script-->
 <script>
     window.onscroll = function () {
         scrollNavabr()
     };
-    const navbar = document.getElementById("top-nav");
-    const sticky = navbar.offsetTop;
+    let navbar = document.getElementById("top-nav");
+    let sticky = navbar.offsetTop;
 
     function scrollNavabr() {
         if (window.pageYOffset >= sticky) {
