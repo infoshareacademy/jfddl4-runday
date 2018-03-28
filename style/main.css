@@ -10,8 +10,15 @@
 
     #hero {
         height: 1000px;
-        background: radial-gradient(circle, whitesmoke, black);
+        background: url('../img/run_man.jpg') center no-repeat fixed;
+        /*<a href="http://www.freepik.com">Designed by ijeab / Freepik</a>*/
+        background-size: cover;
         width: 100%;
+        padding: 90px 20px 0;
+    }
+
+    h1 {
+        text-align: right;
     }
 
     /*  NAVBAR  */
@@ -56,8 +63,6 @@
         text-align: center;
     }
 
-
-
     /*sticky navbar on JS code + added sticky class*/
     #top-nav {
         background-color: #F5F5F5;
@@ -69,6 +74,7 @@
     }
     .full-nav{
         position: absolute;
+        z-index: 99;
     }
     .sticky {
         position: fixed;
@@ -79,12 +85,45 @@
     /* NAVBAR END */
 
 @media only screen and (max-width: 1199px){
+    /*navbar*/
 
-
+    .logo-main {
+        top: 0;
+        left: 0;
+    }
+    .logo-main img{
+        max-width: 100px;
+    }
+    .logo-main figcaption {
+        font-size: 0.75em;
+    }
+    /* navabar end*/
 }
 
-@media only screen and (max-width: 921px){}
+@media only screen and (max-width: 921px) {
+    /*navbar*/
 
-@media only screen and (max-width: 767px){}
+    .logo-main img {
+        max-width: 50px;
+    }
 
+    .logo-main figcaption {
+        font-size: 0.5em;
+    }
 
+    /* navbar */
+}
+
+@media only screen and (max-width: 767px) {
+
+    /*navbar*/
+    .logo-main img {
+        max-width: 40px;
+    }
+
+    .logo-main figcaption {
+        visibility: hidden;
+    }
+
+    /* navbar */
+}
