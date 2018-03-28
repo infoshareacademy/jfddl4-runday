@@ -13,9 +13,9 @@
     <nav id="top-nav">
 
         <figure class="logo-main">
-            <img src="#" alt="">
+            <img src="img/mountain-running-silhouette.svg" alt="runner log">
+            <figcaption>RunDay</figcaption>
         </figure>
-
 
         <ol>
             <li><a class='button--nav-main' href="#product">Functions</a></li>
@@ -70,8 +70,8 @@
     window.onscroll = function () {
         scrollNavabr()
     };
-    let navbar = document.getElementById("top-nav");
-    let sticky = navbar.offsetTop;
+    var navbar = document.getElementById("top-nav");
+    var sticky = navbar.offsetTop;
 
     function scrollNavabr() {
         if (window.pageYOffset >= sticky) {

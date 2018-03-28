@@ -1,24 +1,11 @@
-/*sticky navbar on JS code + added sticky class*/
-#top-nav {
-    overflow: hidden;
-    background-color: #000;
-    margin:0;
-
-}
-
-.sticky {
-    position: fixed;
-    width: 100%;
-    margin-top: 0;
-}
-
-/*sticky navbar end class*/
-/* NAVBAR END */
-
     body {
         margin: 0;
         padding: 0;
+    }
 
+    #container  {
+        width: 80%;
+        margin: auto;
     }
 
     #hero {
@@ -28,6 +15,7 @@
     }
 
     /*  NAVBAR  */
+
     #top-nav > ol {
         list-style: none;
         display: flex;
@@ -37,22 +25,57 @@
     .button--nav-main {
         display: block;
         text-decoration: none;
-        color: white;
-        max-width: 200px;
-        height: 100%;
-        border: solid 2px white;
-        margin: 0 10px;
+        color: black;
         text-align: center;
-        transition: background-color 1s, color 3s, font-weight 3s;
+        font-weight: bold;
+        min-width: 100px;
+        padding: 1em 1em;
+        border: solid 2px black;
+        margin: 0 10px;
+        transition: background-color 1s, color 3s;
     }
 
     .button--nav-main:hover {
-        color: black;
-        background: rgb(245 245 245);
+        color: #F5F5F5F5;
+        background: black;
         font-weight: bold;
     }
+    /*logo navbar style */
 
-@media only screen and (max-width: 1199px){}
+
+    .logo-main {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+    .logo-main img{
+        max-width: 150px;
+    }
+
+
+
+    /*sticky navbar on JS code + added sticky class*/
+    #top-nav {
+        background-color: #F5F5F5;
+        margin:0;
+        border: black solid 1px;
+        width:100%;
+        top: 0;
+        left: 0;
+    }
+
+    .sticky {
+        position: fixed;
+        z-index: 100;
+    }
+
+    /*sticky navbar end class*/
+    /* NAVBAR END */
+
+@media only screen and (max-width: 1199px){
+
+
+}
 
 @media only screen and (max-width: 921px){}
 
