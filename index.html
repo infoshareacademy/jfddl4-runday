@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RUN RUN RUN</title>
+    <meta name="description" content="about running">
+    <meta name="keywords" content="running run runner">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body>
+<div id="container">
+    <!--top navigation start - sticky navbar -->
+    <nav id="top-nav">
+        <ol>
+            <li><a href="#product">Functions</a></li>
+            <li><a href="#opening-entry">Entry</a></li>
+            <li><a href="#authors">Author</a></li>
+            <li><a href="#authors">Author</a></li>
+            <li><a href="#authors">Author</a></li>
+        </ol>
+
+    </nav>
+    <!--top nvigation end -->
+
+    <main>
+
+        <!--sekcja hero start - information product-->
+        <section id="hero">
+
+
+        </section>
+        <!--header end-->
+
+
+        <!--first section start - product function -->
+        <section id="product">
+
+        </section>
+        <!-- first section end-->
+
+        <!--second section start - opening entry -->
+        <section id="opening-entry">
+
+        </section>
+        <!-- second section end-->
+
+        <!-- authors - team information -->
+        <section id="authors">
+
+        </section>
+
+    </main>
+
+    <!--footer start -->
+    <footer>
+
+    </footer>
+    <!-- footer end -->
+</div>
+
+
+
+
+
+<!-- sticky navbar script-->
+<script>
+    window.onscroll = function () {
+        scrollNavabr()
+    };
+    const navbar = document.getElementById("top-nav");
+    const sticky = navbar.offsetTop;
+
+    function scrollNavabr() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+
+</body>
+</html>

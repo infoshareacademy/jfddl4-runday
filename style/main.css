@@ -1,0 +1,57 @@
+
+body {
+    margin:0;
+    padding:0;
+
+}
+
+
+
+
+#hero {
+    height:1000px;
+    background: radial-gradient(circle, whitesmoke, black);
+    width: 100%;
+}
+
+/*  NAVBAR  */
+#top-nav > ol {
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#top-nav > ol > li > a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 200px;
+    height: 100%;
+    border: solid 2px white;
+    margin:0 10px;
+    text-align: center;
+    transition: background-color 1s, color 3s, font-weight 3s;
+}
+
+#top-nav > ol > li > a:hover {
+    color: black;
+    background: rgb(245 245 245);
+    font-weight: bold;
+}
+
+/*sticky navbar on JS code + added sticky class*/
+#top-nav {
+    overflow: hidden;
+    background-color: #000;
+    margin:0;
+
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+}
+
+/*sticky navbar end class*/
+/* NAVBAR END */
