@@ -10,7 +10,7 @@
 <body>
 <div id="container">
     <!--top navigation start - sticky navbar -->
-    <nav id="top-nav">
+    <nav id="top-nav" class="full-nav">
 
         <figure class="logo-main">
             <img src="img/mountain-running-silhouette.svg" alt="runner log">
@@ -75,9 +75,11 @@
 
     function scrollNavabr() {
         if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
+            navbar.classList.add("sticky");
+            navbar.classList.remove("full-nav");
         } else {
             navbar.classList.remove("sticky");
+            navbar.classList.add("full-nav");
         }
     }
 </script>

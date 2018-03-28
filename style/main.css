@@ -52,6 +52,10 @@
         max-width: 150px;
     }
 
+    .logo-main figcaption {
+        text-align: center;
+    }
+
 
 
     /*sticky navbar on JS code + added sticky class*/
@@ -63,7 +67,9 @@
         top: 0;
         left: 0;
     }
-
+    .full-nav{
+        position: absolute;
+    }
     .sticky {
         position: fixed;
         z-index: 100;
