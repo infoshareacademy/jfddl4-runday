@@ -60,15 +60,20 @@ body {
 #features-info {
     display: flex;
     justify-content: center;
-    align-items: baseline;
-    flex-direction: column;
-    margin-left: 20%;
-    width: 30%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .feature-info{
     border: 1px solid black;
     padding: 10px;
+    width: 48%;
+}
+
+.feature-info-image{
+    width: 30%;
 }
 
 
