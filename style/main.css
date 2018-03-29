@@ -1,24 +1,35 @@
     body {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
 
     #container  {
         width: 80%;
         margin: auto;
+        position: relative;
+        top: 5em;
+        z-index:-1;
     }
 
     #hero {
-        height: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
         background: url('../img/run_man.jpg') center no-repeat fixed;
         /*<a href="http://www.freepik.com">Designed by ijeab / Freepik</a>*/
         background-size: cover;
         width: 100%;
-        padding: 90px 20px 0;
     }
 
     h1 {
-        text-align: right;
+        box-shadow: 0 0 110px 0 rgba(0,0,0,0.75);
+        padding: .3em;
+        font-size: 5em;
+        color: darkkhaki;
+        text-align: center;
+        width: 80%;
     }
 
     /*  NAVBAR  */
@@ -26,7 +37,8 @@
     #top-nav > ol {
         list-style: none;
         display: flex;
-        flex-direction: row-reverse;
+        justify-content: flex-end;
+
     }
 
     .button--nav-main {
@@ -61,10 +73,22 @@
 
     .logo-main figcaption {
         text-align: center;
+
     }
 
-    /*sticky navbar on JS code + added sticky class*/
+    .nav-chose--section{
+        width: 50%;
+    }
+
+
     #top-nav {
+
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-end;
         background-color: #F5F5F5;
         margin:0;
         border: black solid 1px;
@@ -72,16 +96,7 @@
         top: 0;
         left: 0;
     }
-    .full-nav{
-        position: absolute;
-        z-index: 99;
-    }
-    .sticky {
-        position: fixed;
-        z-index: 100;
-    }
 
-    /*sticky navbar end class*/
     /* NAVBAR END */
 
 @media only screen and (max-width: 1199px){

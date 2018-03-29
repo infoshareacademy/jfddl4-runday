@@ -10,14 +10,14 @@
 <body>
 <div id="container">
     <!--top navigation start - sticky navbar -->
-    <nav id="top-nav" class="full-nav">
+    <nav id="top-nav">
 
         <figure class="logo-main">
             <img src="img/mountain-running-silhouette.svg" alt="runner log">
             <figcaption>RunDay</figcaption>
         </figure>
 
-        <ol>
+        <ol class="nav-chose--section">
             <li><a class='button--nav-main' href="#product">Functions</a></li>
             <li><a class='button--nav-main' href="#opening-entry">Entry</a></li>
             <li><a class='button--nav-main' href="#authors">Author</a></li>
@@ -62,26 +62,6 @@
     </footer>
     <!-- footer end -->
 </div>
-
-
-<!-- sticky navbar script-->
-<script>
-    window.onscroll = function () {
-        scrollNavabr()
-    };
-    var navbar = document.getElementById("top-nav");
-    var sticky = navbar.offsetTop;
-
-    function scrollNavabr() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky");
-            navbar.classList.remove("full-nav");
-        } else {
-            navbar.classList.remove("sticky");
-            navbar.classList.add("full-nav");
-        }
-    }
-</script>
 
 </body>
 </html>
