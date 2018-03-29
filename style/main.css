@@ -62,7 +62,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -78,6 +78,8 @@ body {
 
 .feature-info-image{
     width: 40%;
+    border: 1px solid black;
+    margin: 0;
 }
 
 
