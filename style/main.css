@@ -57,13 +57,19 @@ body {
 /* NAVBAR END */
 
 /*FEATURES INFO */
-#features-info article{
+#features-info {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    margin-left: 20%;
     width: 30%;
-    margin: 20px 20px;
-    display: block;
-
 }
 
+.feature-info{
+    border: 1px solid black;
+    padding: 10px;
+}
 
 
 /*FEATURES INFO END*/
