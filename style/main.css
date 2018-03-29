@@ -66,6 +66,7 @@ body {
     flex-direction: row;
     width: 80%;
     margin: 0 auto;
+    background-color: darkslategray;
 }
 
 .feature-info-image-size{
@@ -73,15 +74,20 @@ body {
 }
 
 .features-info-article{
-    border: 1px solid black;
     padding: 10px;
     width: 40%;
+    background-color: #fff;
+    font-size: 1.5em;
 }
 
 .feature-info-image{
     width: 40%;
-    border: 1px solid black;
     margin: 0;
+}
+.features-info-article h3{
+    font-size: 2.5em;
+    margin: 5% 0;
+    text-align: center;
 }
 
 
