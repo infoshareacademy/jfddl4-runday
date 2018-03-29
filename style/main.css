@@ -59,11 +59,18 @@ body {
 /* NAVBAR END */
 
 /*FEATURES INFO */
-#features-info {
+.features-info-flex-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: row;
+}
+
+.features-info-flex-container-reversed{
+    flex-direction: row-reverse;
+}
+
+#features-info {
+
     width: 70%;
     margin: 0 auto;
     background-color: darkslategray;
@@ -86,7 +93,7 @@ body {
 }
 .features-info-article h3{
     font-size: 2em;
-    margin: 5% 0;
+    margin: 0 0 5% 0;
     text-align: center;
 }
 
