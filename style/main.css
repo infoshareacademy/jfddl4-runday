@@ -1,7 +1,23 @@
+/*COLOR PALETE:
+    #18121E
+    #233237
+    #984B43
+    #EAC67A
+ */
+
+/*Fonts area*/
+@font-face {
+
+}
+
+/*end fonts area*/
+
+
     body {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        background: #233237;
     }
 
     #container  {
@@ -20,17 +36,21 @@
         background: url('../img/run_man.jpg') center no-repeat fixed;
         /*<a href="http://www.freepik.com">Designed by ijeab / Freepik</a>*/
         background-size: cover;
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
         width: 100%;
+
     }
 
     h1 {
-        width: 80%;
+        width: 60%;
         font-size: 5em;
         color: darkkhaki;
         text-align: center;
-        box-shadow: 0 0 110px 0 rgba(0,0,0,0.75);
+        box-shadow: rgba(0,0,0,0.75);
         padding: .3em;
-
+        position: relative;
+        z-index: 90;
     }
 
     /*  NAVBAR  */
@@ -39,9 +59,10 @@
         list-style: none;
         display: flex;
         justify-content: flex-start;
-        width: 50%;
+        width: 60%;
         padding: 0;
         margin: 0;
+
     }
 
     .nav-chose--section li {
@@ -53,25 +74,26 @@
     .button--nav-main {
         display: block;
         text-decoration: none;
-        color: black;
+        font-family: "Lato Semibold", Serif;
+        color: #EAC67A ;
         text-align: center;
         font-weight: bold;
         width: 100%;
         margin: auto;
         padding: 1em 1em;
-        border: 2px black;
-        border-left: solid;
-        transition: background-color 1s, color 3s;
+        transition: box-shadow 1s;
+
     }
 
 
     .button--nav-main:hover {
-        color: #F5F5F5F5;
-        background: black;
+        /*color: #984B43;*/
+        box-shadow: inset 0 -0.3em 0 -0.1em #EAC67A;
+        /*background: black;*/
         font-weight: bold;
+
     }
     /*logo navbar style */
-
 
     .logo-main {
         display: flex;
@@ -82,11 +104,16 @@
     }
     .logo-main img{
         max-width: 4em;
+        padding-left: 2em;
+
     }
 
     .logo-main figcaption {
+        font-family: "Lato Semibold", SansSerif;
         text-align: center;
         margin: auto 0;
+        font-size: 3em;
+        color: #984B43;
 
     }
 
@@ -99,8 +126,9 @@
         left: 0;
         display: flex;
         justify-content: space-between;
-        background-color: #F5F5F5;
+        background-color: #18121E;
         margin:0;
+        box-shadow: 0 0.4em 0.6em 0 rgba(0,0,0,0.70);
         z-index: 99;
     }
 
@@ -114,27 +142,19 @@
 
 
     .logo-main img{
-        max-width: 100px;
+        padding-left: 1em;
     }
-    .logo-main figcaption {
-        font-size: 0.75em;
-    }
+
     /* navabar end*/
 }
 
 @media only screen and (max-width: 921px) {
     /*navbar*/
-
     .logo-main img {
         max-width: 50px;
     }
 
-    .logo-main figcaption {
-        font-size: 0.5em;
-    }
-
-
-    /* navbar */
+   /* navbar */
 }
 
 @media only screen and (max-width: 767px) {
@@ -145,11 +165,11 @@
     }
 
     .logo-main figcaption {
-        display: contents;
+        font-size: 2em;
+        padding-left: 0.5em;
     }
 
     .nav-burger {
-        display: contents;
         display: block;
         width: 50%;
         text-align: right;
