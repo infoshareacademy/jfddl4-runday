@@ -5,10 +5,10 @@
     }
 
     #container  {
-        width: 80%;
+        width: 100%;
         margin: auto;
         position: relative;
-        top: 5em;
+        top: 3em;
         z-index:-1;
     }
 
@@ -105,17 +105,14 @@
     }
 
     .nav-burger {
-        visibility: hidden;
+        display: none;
     }
     /* NAVBAR END */
 
 @media only screen and (max-width: 1199px){
     /*navbar*/
 
-    .logo-main {
-        display: flex;
-        ;
-    }
+
     .logo-main img{
         max-width: 100px;
     }
@@ -148,15 +145,19 @@
     }
 
     .logo-main figcaption {
-        visibility: hidden;
+        display: contents;
     }
 
     .nav-burger {
-        visibility: visible;
+        display: contents;
+        display: block;
+        width: 50%;
+        text-align: right;
+
     }
 
     .nav-chose--section {
-        visibility: hidden;
+        display: none;
     }
     /* navbar */
 }
