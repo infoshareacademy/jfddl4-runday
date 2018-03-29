@@ -16,7 +16,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 500px;
+        max-height: 500px;
         background: url('../img/run_man.jpg') center no-repeat fixed;
         /*<a href="http://www.freepik.com">Designed by ijeab / Freepik</a>*/
         background-size: cover;
@@ -24,35 +24,46 @@
     }
 
     h1 {
-        box-shadow: 0 0 110px 0 rgba(0,0,0,0.75);
-        padding: .3em;
+        width: 80%;
         font-size: 5em;
         color: darkkhaki;
         text-align: center;
-        width: 80%;
+        box-shadow: 0 0 110px 0 rgba(0,0,0,0.75);
+        padding: .3em;
+
     }
 
     /*  NAVBAR  */
 
-    #top-nav > ol {
+    .nav-chose--section {
         list-style: none;
         display: flex;
-        justify-content: flex-end;
-
+        justify-content: flex-start;
+        width: 50%;
+        padding: 0;
+        margin: 0;
     }
 
+    .nav-chose--section li {
+        display: flex;
+        flex: 1;
+        width: 100%;
+
+    }
     .button--nav-main {
         display: block;
         text-decoration: none;
         color: black;
         text-align: center;
         font-weight: bold;
-        min-width: 100px;
+        width: 100%;
+        margin: auto;
         padding: 1em 1em;
-        border: solid 2px black;
-        margin: 0 10px;
+        border: 2px black;
+        border-left: solid;
         transition: background-color 1s, color 3s;
     }
+
 
     .button--nav-main:hover {
         color: #F5F5F5F5;
@@ -63,48 +74,47 @@
 
 
     .logo-main {
-        position: absolute;
-        top: 5px;
-        left: 5px;
+        display: flex;
+        justify-items: flex-start;
+        margin: 0;
+        padding: 0;
+
     }
     .logo-main img{
-        max-width: 150px;
+        max-width: 4em;
     }
 
     .logo-main figcaption {
         text-align: center;
+        margin: auto 0;
 
-    }
-
-    .nav-chose--section{
-        width: 50%;
     }
 
 
     #top-nav {
-
         position: fixed;
         width: 100%;
+        max-height: 3.5em;
         top: 0;
         left: 0;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         background-color: #F5F5F5;
         margin:0;
-        border: black solid 1px;
-        width:100%;
-        top: 0;
-        left: 0;
+        z-index: 99;
     }
 
+    .nav-burger {
+        visibility: hidden;
+    }
     /* NAVBAR END */
 
 @media only screen and (max-width: 1199px){
     /*navbar*/
 
     .logo-main {
-        top: 0;
-        left: 0;
+        display: flex;
+        ;
     }
     .logo-main img{
         max-width: 100px;
@@ -126,6 +136,7 @@
         font-size: 0.5em;
     }
 
+
     /* navbar */
 }
 
@@ -140,5 +151,12 @@
         visibility: hidden;
     }
 
+    .nav-burger {
+        visibility: visible;
+    }
+
+    .nav-chose--section {
+        visibility: hidden;
+    }
     /* navbar */
 }
