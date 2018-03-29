@@ -6,10 +6,8 @@
  */
 
 /*Fonts area*/
-@font-face {
-
-}
-
+@import url('https://fonts.googleapis.com/css?family=Faster+One');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
 /*end fonts area*/
 
 
@@ -27,6 +25,7 @@
         top: 3em;
         z-index:-1;
     }
+
 
     #hero {
         display: flex;
@@ -74,7 +73,8 @@
     .button--nav-main {
         display: block;
         text-decoration: none;
-        font-family: "Lato Semibold", Serif;
+        font-family: 'Bangers', cursive;
+        letter-spacing: 0.1em;
         color: #EAC67A ;
         text-align: center;
         font-weight: bold;
@@ -99,21 +99,23 @@
         display: flex;
         justify-items: flex-start;
         margin: 0;
-        padding: 0;
+        padding: 0 0 0 1em;
 
     }
     .logo-main img{
         max-width: 4em;
-        padding-left: 2em;
+        border-radius: 100%;
+        background: #EAC67A;
 
     }
 
     .logo-main figcaption {
-        font-family: "Lato Semibold", SansSerif;
+        font-family: 'Bangers', cursive;
         text-align: center;
         margin: auto 0;
         font-size: 3em;
         color: #984B43;
+        padding-left: 0.3em;
 
     }
 
@@ -141,10 +143,6 @@
     /*navbar*/
 
 
-    .logo-main img{
-        padding-left: 1em;
-    }
-
     /* navabar end*/
 }
 
@@ -152,6 +150,8 @@
     /*navbar*/
     .logo-main img {
         max-width: 50px;
+        max-height: 50px;
+        margin: auto;
     }
 
    /* navbar */
@@ -160,13 +160,16 @@
 @media only screen and (max-width: 767px) {
 
     /*navbar*/
+    .logo-main {
+        padding-left: 1em;
+    }
     .logo-main img {
         max-width: 40px;
+        max-height: 40px;
     }
 
     .logo-main figcaption {
         font-size: 2em;
-        padding-left: 0.5em;
     }
 
     .nav-burger {
