@@ -65,9 +65,11 @@ body {
     flex-wrap: wrap;
 }
 
-.features-info-flex-container-reversed{
+.features-info-flex-container--reversed{
     flex-direction: row-reverse;
 }
+
+
 
 #features-info {
 
