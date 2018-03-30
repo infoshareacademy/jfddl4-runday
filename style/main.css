@@ -35,8 +35,7 @@
         background: url('../img/run_man.jpg') center no-repeat fixed;
         /*<a href="http://www.freepik.com">Designed by ijeab / Freepik</a>*/
         background-size: cover;
-        filter: grayscale(1);
-        -webkit-filter: grayscale(1);
+
         width: 100%;
 
     }
@@ -44,7 +43,7 @@
     h1 {
         width: 60%;
         font-size: 5em;
-        color: darkkhaki;
+        color: #984B43;
         text-align: center;
         box-shadow: rgba(0,0,0,0.75);
         padding: .3em;
@@ -176,6 +175,7 @@
         display: block;
         width: 50%;
         text-align: right;
+        color: #EAC67A;
 
     }
 
