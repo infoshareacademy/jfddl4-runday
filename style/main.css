@@ -8,6 +8,8 @@
 /*Fonts area*/
 @import url('https://fonts.googleapis.com/css?family=Faster+One');
 @import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 /*end fonts area*/
 
 
@@ -20,8 +22,7 @@
 
     #container  {
         width: 100%;
-        margin: auto;
-        position: relative;
-        top: 3em;
+        margin: 3em auto 0 auto;
         z-index:-1;
+        font-family: 'Josefin Sans', sans-serif;
     }

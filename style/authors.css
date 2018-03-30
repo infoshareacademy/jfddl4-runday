@@ -5,25 +5,25 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 500px;
+    min-height: 400px;
     background-color: #EAC67A;
+    box-shadow: 0 0.01em 0 0.1em rgba(0,0,0,0.5);
 }
 
 .author_info {
-    width: 250px;
-    height: 300px;
+    width: 30%;
     background-color: #984B43;
     border-radius: 2em;
-
-}
+   }
 
 
 .author_photo {
-    height: 200px;
-    width: 200px;
+    height: 8em;
+    width: 8em;
     border-radius: 100%;
-    background-color: green;
-    margin: -80px auto 0 auto;
+    background-color: #233237;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .author_name {
@@ -32,4 +32,42 @@
     letter-spacing: 0.1em;
     line-height: 1.2em;
     font-size: 1.5em;
+    margin-top:-3em;
+}
+
+.author_contact {
+    margin: 0 auto 1em auto;
+    display: flex;
+    justify-content: space-around;
+    height: 30%;
+    width: 100%;
+}
+
+.author_contacts--link {
+    width: 25%;
+    height: 4em;
+    transition: margin-top 0.2s;
+}
+.author_contacts--link:active {
+    margin-top: -0.2em;
+}
+.mail_link {
+    background-image: url('../img/social_media/001-black-back-closed-envelope-shape.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.git_link {
+    background-image: url('../img/social_media/003-github-logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.face_link {
+    background-image: url('../img/social_media/004-square.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

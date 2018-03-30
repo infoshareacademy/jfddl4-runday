@@ -49,6 +49,7 @@
 
 }
 .logo-main img{
+    margin: auto;
     max-width: 4em;
     max-height: 4em;
     border-radius: 100%;
