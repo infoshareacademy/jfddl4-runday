@@ -1,0 +1,22 @@
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 500px;
+    background: url('../img/woman_run.jpg') center no-repeat fixed;
+    /*<a href="http://www.freepik.com">Designed by senivpetro / Freepik</a>*/
+    background-size: cover;
+
+    width: 100%;
+}
+
+h1 {
+    width: 60%;
+    font-size: 5em;
+    color: #984B43;
+    text-align: center;
+    box-shadow: rgba(0,0,0,0.75);
+    padding: .3em;
+    position: relative;
+    z-index: 90;
+}

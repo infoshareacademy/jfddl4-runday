@@ -1,0 +1,136 @@
+/*  NAVBAR  */
+
+.nav-chose--section {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    width: 65%;
+    padding: 0;
+    margin: 0;
+
+}
+
+.nav-chose--section li {
+    display: flex;
+    flex: 1;
+    width: 100%;
+
+}
+.button--nav-main {
+    display: block;
+    text-decoration: none;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    color: #EAC67A ;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    margin: auto;
+    padding: 1em 1em;
+    transition: box-shadow 1s;
+
+}
+
+.button--nav-main:hover {
+    /*color: #984B43;*/
+    box-shadow: inset 0 -0.3em 0 -0.1em #EAC67A;
+    /*background: black;*/
+    font-weight: bold;
+
+}
+/*logo navbar style */
+
+.logo-main {
+    display: flex;
+    justify-items: flex-start;
+    margin: 0;
+    padding: 0 0 0 1em;
+
+}
+.logo-main img{
+    max-width: 4em;
+    max-height: 4em;
+    border-radius: 100%;
+    background: #EAC67A;
+
+}
+
+.logo-main figcaption {
+    font-family: 'Bangers', cursive;
+    text-align: center;
+    margin: auto 0;
+    font-size: 3em;
+    color: #984B43;
+    padding-left: 0.3em;
+
+}
+
+
+#top-nav {
+    position: fixed;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #18121E;
+    margin:0;
+    box-shadow: 0 0.4em 0.6em 0 rgba(0,0,0,0.70);
+    z-index: 99;
+}
+
+.nav-burger {
+    display: none;
+}
+/* NAVBAR END */
+
+@media only screen and (max-width: 1199px){
+    /*navbar*/
+
+
+    /* navabar end*/
+}
+
+@media only screen and (max-width: 921px) {
+    /*navbar*/
+    .logo-main img {
+        max-width: 50px;
+        max-height: 50px;
+        margin: auto;
+    }
+    .button--nav-main {
+        font-size: 1em;
+    }
+    /* navbar */
+}
+
+@media only screen and (max-width: 767px) {
+
+    /*navbar*/
+    .logo-main {
+        padding-left: 1em;
+    }
+    .logo-main img {
+        max-width: 40px;
+        max-height: 40px;
+    }
+
+    .logo-main figcaption {
+        font-size: 2em;
+    }
+
+    .nav-burger {
+        display: block;
+        width: 50%;
+        text-align: right;
+        color: #EAC67A;
+
+    }
+
+    .nav-chose--section {
+        display: none;
+    }
+    /* navbar */
+}
