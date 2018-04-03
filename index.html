@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="style/navigation_top.css">
     <link rel="stylesheet" type="text/css" href="style/footer.css">
     <link rel="stylesheet" type="text/css" href="style/form_main.css">
+    <link rel="stylesheet" type="text/css" href="style/product.css">
 
 </head>
 <body>
@@ -31,9 +32,9 @@
     </figure>
 
     <ol class="nav-chose--section">
-        <li><a class='button--nav-main' href="#product">Functions</a></li>
-        <li><a class='button--nav-main' href="#opening-entry">Entry</a></li>
+        <li><a class='button--nav-main' href="#functions">Functions</a></li>
         <li><a class='button--nav-main' href="#authors">Author</a></li>
+        <li><a class='button--nav-main' href="#form-entry">Entry</a></li>
         <li><a class='button--nav-main' href="#authors">Author</a></li>
         <li><a class='button--nav-main' href="#authors">Author</a></li>
     </ol>
@@ -50,11 +51,26 @@
             <h2>Welcome to Runners World!</h2>
         </section>
         <!--hero end-->
-
-
         <!--first section start - product function -->
-        <section id="product">
-
+        <section id="functions">
+            <section class="functions_container">
+                <figure class="functions_option">
+                    <img src="./img/functions_iko/001-destination.svg" alt="" class="function_item">
+                    <figcaption class="function_name">Find your own way</figcaption>
+                </figure>
+                <figure class="functions_option">
+                    <img src="./img/functions_iko/004-map-1.svg" alt="" class="function_item">
+                    <figcaption class="function_name">Inform your friends</figcaption>
+                </figure>
+                <figure class="functions_option">
+                    <img src="./img/functions_iko/005-technology-1.svg" alt="" class="function_item">
+                    <figcaption class="function_name">Create event</figcaption>
+                </figure>
+                <figure class="functions_option">
+                    <img src="./img/functions_iko/007-run.svg" alt="" class="function_item">
+                    <figcaption class="function_name">Running with friends</figcaption>
+                </figure>
+            </section>
         </section>
         <!-- first section end-->
 
@@ -63,24 +79,19 @@
 
         </section>
         <!-- second section end-->
+        <!-- post email info -->
         <section id="form-entry">
             <form action="/#" method="post">
-
-
                 <p><label for="name">Name:
                     <input type="text" id="name" name="user_name" placeholder="Entry your name">
                 </label></p>
-
                 <p><label for="mail">E-mail:
                     <input type="email" id="mail" name="user_email" placeholder="Entry your e-mail">
                 </label></p>
-
                 <p><label for="msg">Message:
                     <textarea id="msg" name="user_message" rows="10" cols="50"> </textarea>
                 </label></p>
-
                 <p><input type="submit" value="Send your message"></p>
-
             </form>
         </section>
         <!-- authors - team information -->
@@ -91,15 +102,18 @@
                     <img src="img/authors_photo/003-businessman.svg" alt="michał_photo">
                 </figure>
                 <figure class="author_contact">
-                    <a href='#' class="author_contacts--link mail_link">
-
-                    </a>
-                    <a href='#'class="author_contacts--link git_link">
-
-                    </a>
-                    <a href='#'class="author_contacts--link face_link">
-
-                    </a>
+                    <a href='#' class="author_contacts--link mail_logo">
+                <p class="social_icon_name">mail link</p>
+                </a>
+                <a href='#'class="author_contacts--link git_logo">
+                    <p class="social_icon_name">github link</p>
+                </a>
+                <a href='#'class="author_contacts--link linkedin_logo">
+                    <p class="social_icon_name">linkedin link</p>
+                </a>
+                <a href='#'class="author_contacts--link face_logo">
+                    <p class="social_icon_name">facebook link</p>
+                </a>
                 </figure>
             </section>
             <section class="author_info">
@@ -108,15 +122,18 @@
                     <img src="img/authors_photo/002-gothic.svg" alt="natalia_photo">
                 </figure>
                 <figure class="author_contact">
-                    <a href='#' class="author_contacts--link mail_link">
-
-                    </a>
-                    <a href='#'class="author_contacts--link git_link">
-
-                    </a>
-                    <a href='#'class="author_contacts--link face_link">
-
-                    </a>
+                    <a href='#' class="author_contacts--link mail_logo">
+                <p class="social_icon_name">mail link</p>
+                </a>
+                <a href='#'class="author_contacts--link git_logo">
+                    <p class="social_icon_name">github link</p>
+                </a>
+                <a href='#'class="author_contacts--link linkedin_logo">
+                    <p class="social_icon_name">linkedin link</p>
+                </a>
+                <a href='#'class="author_contacts--link face_logo">
+                    <p class="social_icon_name">facebook link</p>
+                </a>
                 </figure>
             </section>
             <section class="author_info">
@@ -125,25 +142,22 @@
                     <img src="img/authors_photo/001-steampunk.svg" alt="pawel_photo">
                 </figure>
                 <figure class="author_contact">
-                    <a href='#' class="author_contacts--link mail_link">
-
+                    <a href='#' class="author_contacts--link mail_logo">
+                        <p class="social_icon_name">mail link</p>
                     </a>
-                    <a href='#'class="author_contacts--link git_link">
-
+                    <a href='#'class="author_contacts--link git_logo">
+                        <p class="social_icon_name">github link</p>
                     </a>
-                    <a href='#'class="author_contacts--link face_link">
-
+                    <a href='#'class="author_contacts--link linkedin_logo">
+                        <p class="social_icon_name">linkedin link</p>
                     </a>
-
-                    <a href='#'class="author_contacts--link face_link">
-
+                    <a href='#'class="author_contacts--link face_logo">
+                        <p class="social_icon_name">facebook link</p>
                     </a>
                 </figure>
             </section>
-
-
         </section>
-
+        <!-- authors - end -->
     </main>
 
     <!--footer start -->
