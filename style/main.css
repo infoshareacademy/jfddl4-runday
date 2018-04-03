@@ -63,19 +63,25 @@ body {
     flex-wrap: wrap;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 921px) {
     .features-info-flex-container--reversed {
         flex-direction: row-reverse;
     }
     .features-info-article{
         width: 35%;
     }
+    .feature-info-image{
+        width: 35%;
+    }
 
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 921px){
     .features-info-article{
         width: 100%;
+    }
+    .feature-info-image{
+        width: 50%
     }
 }
 
@@ -96,9 +102,8 @@ body {
     background-color: #ffffff;
     font-size: 1.5em;
 }
-
-.feature-info-image {
-    width: 35%;
+.feature-info-image
+ {
     margin: 0;
     padding: 5% 0;
 }
