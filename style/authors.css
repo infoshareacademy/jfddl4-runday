@@ -22,7 +22,7 @@
     height: 8em;
     width: 8em;
     border-radius: 100%;
-    background-color: #233237;
+    background-color: #EAC67A;
     margin-left: auto;
     margin-right: auto;
 }
@@ -47,10 +47,14 @@
 .author_contacts--link {
     width: 25%;
     height: 4em;
+    text-decoration: none;
     transition: margin-top 0.2s;
 }
 .author_contacts--link:active {
-    margin-top: -0.2em;
+    margin-top: -0.4em;
+}
+.author_contacts--link:visited {
+    text-decoration: none;
 }
 .mail_link {
     background-image: url('../img/social_media/001-black-back-closed-envelope-shape.svg');
@@ -71,4 +75,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.author_photo>img {
+    margin-top: -1.1em;
 }
