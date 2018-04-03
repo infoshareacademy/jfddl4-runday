@@ -127,8 +127,14 @@
         width: 50%;
         text-align: right;
         color: #EAC67A;
-
     }
+    .nav-burger > img {
+        min-width: 8vw;
+        max-width: 9vw;
+        background: #EAC67A;
+        border-radius: 50%;
+    }
+
 
     .nav-chose--section {
         display: none;
