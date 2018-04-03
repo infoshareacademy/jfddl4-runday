@@ -25,7 +25,9 @@
         <figcaption>Run Day!</figcaption>
     </figure>
     <figure class="nav-burger">
-        burger
+        <figcaption class="nothing" style='display: none; float: left';>abra-cadabra and nothing ....</figcaption>
+        <img src="./img/menu-button.svg" alt="menu">
+
     </figure>
 
     <ol class="nav-chose--section">
@@ -63,24 +65,22 @@
         <!-- second section end-->
         <section id="form-entry">
             <form action="/#" method="post">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="user_name" value="Entry your name">
-                </div>
 
-                <div>
-                    <label for="mail">E-mail:</label>
-                    <input type="email" id="mail" name="user_email">
-                </div>
 
-                <div>
-                    <label for="msg">Message:</label>
-                    <textarea id="msg" name="user_message"></textarea>
-                </div>
+                <p><label for="name">Name:
+                    <input type="text" id="name" name="user_name" placeholder="Entry your name">
+                </label></p>
 
-                <div class="button">
-                    <button type="submit">Send your message</button>
-                </div>
+                <p><label for="mail">E-mail:
+                    <input type="email" id="mail" name="user_email" placeholder="Entry your e-mail">
+                </label></p>
+
+                <p><label for="msg">Message:
+                    <textarea id="msg" name="user_message" rows="10" cols="50"> </textarea>
+                </label></p>
+
+                <p><input type="submit" value="Send your message"></p>
+
             </form>
         </section>
         <!-- authors - team information -->
@@ -144,6 +144,7 @@
 
     <!--footer start -->
     <footer id="footer_main">
+        <p>&copy; RunDay!</p>
 
     </footer>
     <!-- footer end -->
