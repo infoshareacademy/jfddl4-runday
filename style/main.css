@@ -1,15 +1,17 @@
 /*COLOR PALETE:
-    #18121E
-    #233237
-    #984B43
-    #EAC67A
+#ed1c24
+#da0f16
+#ebebeb - background
  */
 
 /*Fonts area*/
-@import url('https://fonts.googleapis.com/css?family=Faster+One');
-@import url('https://fonts.googleapis.com/css?family=Bangers');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+/*  font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Dancing Script', cursive;*/
+
 /*end fonts area*/
 
 
@@ -17,12 +19,11 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        background: #233237;
+        background: #ebebeb;
     }
 
     #container  {
         width: 100%;
-        margin: 3em auto 0 auto;
         z-index:-1;
-        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Open Sans', sans-serif;
     }
