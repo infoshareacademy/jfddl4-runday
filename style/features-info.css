@@ -54,3 +54,21 @@
     margin: 0 0 5% 0;
     text-align: center;
 }
+
+.features-flex-container{
+    display: flex;
+    background-color: gray;
+    margin-bottom: 5%;
+}
+
+.feature-icon{
+    border-radius: 50%;
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+}
+
+.icon-caption{
+    text-align:center;
+    font-size: 2em;
+}
