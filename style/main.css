@@ -1,0 +1,28 @@
+/*COLOR PALETE:
+    #18121E
+    #233237
+    #984B43
+    #EAC67A
+ */
+
+/*Fonts area*/
+@import url('https://fonts.googleapis.com/css?family=Faster+One');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+/*end fonts area*/
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #233237;
+    }
+
+    #container  {
+        width: 100%;
+        margin: 3em auto 0 auto;
+        z-index:-1;
+        font-family: 'Josefin Sans', sans-serif;
+    }
