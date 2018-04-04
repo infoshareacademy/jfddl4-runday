@@ -12,38 +12,45 @@
     z-index: 99;
 }
 .logo-main {
+    margin: 0;
+    padding: 0;
+}
+
+.logo-main a {
     display: flex;
     justify-items: flex-start;
     margin: 0;
     padding: 0 0 0 1em;
+    text-decoration: none;
 
 }
-.logo-main img{
+.logo-main a img{
     margin: auto;
-    max-width: 4em;
-    max-height: 4em;
-    border-radius: 100%;
+    max-width: 3em;
+    max-height: 3em;
+    border-radius: 5px;
     background: #ebebeb;
 
 }
 
-.logo-main figcaption {
-    font-family: 'Dancing Script', cursive;
+.logo-main a figcaption {
+    font-family: 'Knewave', cursive;
     text-align: center;
     margin: auto 0;
-    font-size: 3em;
+    font-size: 2.5em;
     color: #ed1c24;
     padding-left: 0.3em;
 
 }
 .nav-left--sec {
     margin-left: auto;
+    padding: auto;
 }
 .nav-chose--section {
     list-style: none;
     display: flex;
     justify-content: flex-start;
-    width: 65%;
+    width: 50%;
     padding: 0;
     margin: 0;
 
@@ -59,7 +66,7 @@
     display: block;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.0em;
     color: #ebebeb;
     text-align: center;
     font-weight: bold;

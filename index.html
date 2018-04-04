@@ -22,14 +22,16 @@
 <nav id="top-nav">
 
     <figure class="logo-main">
-        <img src="img/mountain-running-silhouette.svg" alt="runner log">
+        <a href="#container">
+            <img src="img/mountain-running-silhouette.svg" alt="runner log">
 
-        <figcaption>Run Day!</figcaption>
+            <figcaption>Run Day</figcaption>
+
+        </a>
     </figure>
     <figure class="nav-burger">
         <figcaption class="nothing" style='display: none; float: left';>abra-cadabra and nothing ....</figcaption>
         <img src="./img/menu-button.svg" alt="menu">
-
     </figure>
 
     <div class="nav-left--sec">
@@ -51,7 +53,9 @@
         <!-- hero section start - information product-->
         <section id="hero">
             <h2>Welcome to <br>Runners World!</h2>
+            <p><a href="#features">Read More</a></p>
         </section>
+
         <!--header end-->
 
         <!--features and icons -->
@@ -134,89 +138,35 @@
 
         </section>
         <!-- second section end-->
+
         <!-- post email info -->
         <section id="form-entry">
-            <div class="form-entry--ico">
-
-            </div>
 
             <div class="form-entry--main">
             <form class='form-entry--border' action="/#" method="post">
-                <label for="name">
-                    <input type="text" id="name" name="user_name" placeholder="Entry your name">
-                </label>
-                <label for="mail">
-                    <input type="email" id="mail" name="user_email" placeholder="Entry your e-mail">
-                </label>
-                <label for="msg">
-                    <textarea id="msg" name="user_message" rows="10" cols="50"> </textarea>
-                </label>
-                <p><input class='submit' type="submit" value="Send your message"></p>
+                <input name="name" placeholder="What is your name?" class="name" required />
+                <input name="emailaddress" placeholder="What is your email?" class="email" type="email" required />
+                <textarea rows="4" cols="50" name="subject" placeholder="Please enter your message" class="message" required></textarea>
+                <input name="submit" class="btn" type="submit" value="Send" />
+            </form>
             </form>
             </div>
         </section>
         <!-- authors - team information -->
         <section id="authors">
-            <section class="author_info">
-                <p class="author_name"> Michał Kozak<p>
-                <figure class="author_photo">
-                    <img src="img/authors_photo/003-businessman.svg" alt="michał_photo">
-                </figure>
-                <figure class="author_contact">
-                    <a href='#' class="author_contacts--link mail_logo">
-                <p class="social_icon_name">mail link</p>
-                </a>
-                <a href='#'class="author_contacts--link git_logo">
-                    <p class="social_icon_name">github link</p>
-                </a>
-                <a href='#'class="author_contacts--link linkedin_logo">
-                    <p class="social_icon_name">linkedin link</p>
-                </a>
-                <a href='#'class="author_contacts--link face_logo">
-                    <p class="social_icon_name">facebook link</p>
-                </a>
-                </figure>
-            </section>
-            <section class="author_info">
-                <p class="author_name"> Natalia Struk <p>
-                <figure class="author_photo">
-                    <img src="img/authors_photo/002-gothic.svg" alt="natalia_photo">
-                </figure>
-                <figure class="author_contact">
-                    <a href='#' class="author_contacts--link mail_logo">
-                <p class="social_icon_name">mail link</p>
-                </a>
-                <a href='#'class="author_contacts--link git_logo">
-                    <p class="social_icon_name">github link</p>
-                </a>
-                <a href='#'class="author_contacts--link linkedin_logo">
-                    <p class="social_icon_name">linkedin link</p>
-                </a>
-                <a href='#'class="author_contacts--link face_logo">
-                    <p class="social_icon_name">facebook link</p>
-                </a>
-                </figure>
-            </section>
-            <section class="author_info">
-                <p class="author_name"> Paweł Wasil <p>
-                <figure class="author_photo">
-                    <img src="img/authors_photo/001-steampunk.svg" alt="pawel_photo">
-                </figure>
-                <figure class="author_contact">
-                    <a href='#' class="author_contacts--link mail_logo">
-                        <p class="social_icon_name">mail link</p>
-                    </a>
-                    <a href='#'class="author_contacts--link git_logo">
-                        <p class="social_icon_name">github link</p>
-                    </a>
-                    <a href='#'class="author_contacts--link linkedin_logo">
-                        <p class="social_icon_name">linkedin link</p>
-                    </a>
-                    <a href='#'class="author_contacts--link face_logo">
-                        <p class="social_icon_name">facebook link</p>
-                    </a>
-                </figure>
-            </section>
+            <div class="authors_head"><h3>Meet Our Team</h3></div>
+            <div class="author">
+                <div class="author1">
+                    <figure class="author_photo">
+                        <img src="./img/social_media/003-github-logo.svg" alt="">
+                        <figcaption class="author_name">John Doe</figcaption>
+                    </figure>
+                    <div class="author_info"><p>lorem lorem lorem pasterz psów i kotów właściciel</p></div>
+                </div>
+                <div class="author1">3</div>
+                <div class="author1">4</div>
+            </div>
+
         </section>
         <!-- authors - end -->
     </main>

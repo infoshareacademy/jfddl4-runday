@@ -1,91 +1,35 @@
 #authors {
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     width: 100%;
-    min-height: 400px;
+    min-height: 60vh;
     box-shadow: 0 0.01em 0 0.1em rgba(0,0,0,0.5);
 }
 
-.author_info {
-    width: 30%;
-    border-radius: 2em;
-    box-shadow: inset 0 0 1em 0.1em rgba(0,0,0,0.75);
-    margin-bottom: -3em;
-   }
 
-
-.author_photo {
-    height: 8em;
-    width: 8em;
-    border-radius: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.author_name {
-    font-family: 'Montserrat', sans-serif;;
-    text-align: center;
-    line-height: 1.2em;
-    font-size: 1.5em;
-    margin-top:-3em;
-}
-
-.author_contact {
-    margin: 0 auto 1em auto;
+.author {
+    min-width: 90%;
+    min-height:80%;
+    background: green;
     display: flex;
     justify-content: space-around;
-    height: 30%;
+}
+
+.author1{
+    width:30%;
+    min-height: 100%;
+    background: red;
+}
+.author_photo{
+    psoition: relative;
+    height: 40%;
+}
+.author_photo > img   {
     width: 100%;
 }
-
-.author_contacts--link {
-    width: 25%;
-    height: 4em;
-    text-decoration: none;
-    transition: margin-top 0.2s;
-}
-.author_contacts--link:active {
-    margin-top: -0.4em;
-}
-.author_contacts--link:visited {
-    text-decoration: none;
-}
-.mail_logo {
-    background-image: url('../img/social_media/001-black-back-closed-envelope-shape.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.git_logo {
-    background-image: url('../img/social_media/003-github-logo.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.face_logo {
-    background-image: url('../img/social_media/004-square.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.linkedin_logo {
-    background-image: url('../img/social_media/linkedin-logo.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.author_photo > img {
-    margin-top: -1.1em;
-}
-
-
-.social_icon_name {
-    display: none;
+.author_name{
+    text-align: center;
+    color: white;
 }
