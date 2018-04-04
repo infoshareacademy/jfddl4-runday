@@ -35,8 +35,7 @@
         <li><a class='button--nav-main' href="#functions">Functions</a></li>
         <li><a class='button--nav-main' href="#authors">Author</a></li>
         <li><a class='button--nav-main' href="#form-entry">Entry</a></li>
-        <li><a class='button--nav-main' href="#authors">Author</a></li>
-        <li><a class='button--nav-main' href="#authors">Author</a></li>
+
     </ol>
 
 </nav>
@@ -81,18 +80,24 @@
         <!-- second section end-->
         <!-- post email info -->
         <section id="form-entry">
-            <form action="/#" method="post">
-                <p><label for="name">Name:
+            <div class="form-entry--ico">
+
+            </div>
+
+            <div class="form-entry--main">
+            <form class='form-entry--border' action="/#" method="post">
+                <label for="name">
                     <input type="text" id="name" name="user_name" placeholder="Entry your name">
-                </label></p>
-                <p><label for="mail">E-mail:
+                </label>
+                <label for="mail">
                     <input type="email" id="mail" name="user_email" placeholder="Entry your e-mail">
-                </label></p>
-                <p><label for="msg">Message:
+                </label>
+                <label for="msg">
                     <textarea id="msg" name="user_message" rows="10" cols="50"> </textarea>
-                </label></p>
-                <p><input type="submit" value="Send your message"></p>
+                </label>
+                <p><input class='submit' type="submit" value="Send your message"></p>
             </form>
+            </div>
         </section>
         <!-- authors - team information -->
         <section id="authors">
