@@ -8,11 +8,17 @@
     box-shadow: 0 0.01em 0 0.1em rgba(0,0,0,0.5);
 }
 
+/*h3::after {
+    content: '';
+    height: 50px;
+    background: #3dbcaa;}*/
 
+.authors_head  {
+    font-size: 2em;
+}
 .author {
     min-width: 90%;
     min-height:80%;
-    background: green;
     display: flex;
     justify-content: space-around;
 }
@@ -20,16 +26,24 @@
 .author1{
     width:30%;
     min-height: 100%;
-    background: red;
+    background: rgba(0,0,0,0.8);
+    margin-bottom: 0.2em;
+
 }
-.author_photo{
-    psoition: relative;
-    height: 40%;
-}
+
 .author_photo > img   {
     width: 100%;
 }
 .author_name{
     text-align: center;
-    color: white;
+    padding-top: 0.3em;
+    color: #ebebeb;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.author_info {
+    text-align: center;
+    color: #ebebeb;
+    padding: 0.2em 0.1em 0.3em 0.1em;
+    font-size: 1em;
 }
