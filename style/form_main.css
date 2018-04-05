@@ -1,0 +1,45 @@
+#form-entry {
+    background: url('../img/woman_run.jpg') center no-repeat fixed;
+    /*<a href="http://www.freepik.com">Designed by senivpetro / Freepik</a>*/
+    background-size: cover;
+    box-shadow: 0 0.01em 0 0.1em rgba(0,0,0,0.5);
+}
+
+.dark_them {
+
+    background: rgba(0, 0, 0, 0.8);
+    color: #ebebeb;
+}
+
+.dark_them_btn {
+    background: #ed1c24;
+    color: #ebebeb;
+
+}
+
+.dark_them_fon {
+    color: #ed1c24;
+    font-family: 'Knewave', cursive;
+}
+
+.dark_them_b_top {
+    border-top: 1px #ed1c24 solid;
+    padding-top: 0.3em;
+}
+
+.ico_siz_6 {
+    max-width: 6em;
+    border-radius: 0.5em;
+    background: rgba(235, 235, 235, 0.5);
+    padding: 0.4em;
+
+}
+
+dar_theme_foc:focus {
+    color: #0000;
+    background-color: #fff;
+    border-color: #ed1c24;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+
