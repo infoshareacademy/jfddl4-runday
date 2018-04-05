@@ -6,6 +6,7 @@
     <meta name="description" content="about running">
     <meta name="keywords" content="running run runner">
     <!-- STYLE -->
+    <link rel="stylesheet" href="style/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="stylesheet" type="text/css" href="style/features-info.css">
     <link rel="stylesheet" type="text/css" href="style/hero_section.css">
@@ -30,23 +31,23 @@
         </a>
     </figure>
     <figure class="nav-burger">
-        <figcaption class="nothing" style='display: none; float: left';>abra-cadabra and nothing ....</figcaption>
+        <figcaption class="nothing" style='display: none; float: left' ;>abra-cadabra and nothing ....</figcaption>
         <img src="./img/menu-button.svg" alt="menu">
     </figure>
 
     <div class="nav-left--sec">
-    <ol class="nav-chose--section">
-        <li><a class='button--nav-main' href="#functions">Functions</a></li>
-        <li><a class='button--nav-main' href="#authors">Author</a></li>
-        <li><a class='button--nav-main' href="#form-entry">Entry</a></li>
-        <li><a class='button--nav-main' href="#form-entry">Entry</a></li>
-    </ol>
+        <ol class="nav-chose--section">
+            <li><a class='button--nav-main' href="#functions">Functions</a></li>
+            <li><a class='button--nav-main' href="#authors">Author</a></li>
+            <li><a class='button--nav-main' href="#form-entry">Entry</a></li>
+            <li><a class='button--nav-main' href="#form-entry">Entry</a></li>
+        </ol>
     </div>
 
 </nav>
 <!--top nvigation end -->
 
-<div id="container">
+<div class="container-fluis">
 
     <main>
         <h1>RunDay</h1>
@@ -74,10 +75,10 @@
                     </figure>
                 </a>
                 <a href="#feature3">
-                <figure class="feature-figure">
-                    <img src="flag.png" alt="ikona flagi" class="feature-icon">
-                    <figcaption class="icon-caption">Feature 3</figcaption>
-                </figure>
+                    <figure class="feature-figure">
+                        <img src="flag.png" alt="ikona flagi" class="feature-icon">
+                        <figcaption class="icon-caption">Feature 3</figcaption>
+                    </figure>
                 </a>
             </div>
         </section>
@@ -141,15 +142,26 @@
 
         <!-- post email info -->
         <section id="form-entry">
+            <div class="row">
+                <div class="col-6">
 
-            <div class="form-entry--main">
-            <form class='form-entry--border' action="/#" method="post">
-                <input name="name" placeholder="What is your name?" class="name" required />
-                <input name="emailaddress" placeholder="What is your email?" class="email" type="email" required />
-                <textarea rows="4" cols="50" name="subject" placeholder="Please enter your message" class="message" required></textarea>
-                <input name="submit" class="btn" type="submit" value="Send" />
-            </form>
-            </form>
+                </div>
+                <div class="col-6">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                   placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group text-right">
+                            <input class="btn btn-primary " type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
         <!-- authors - team information -->
@@ -161,21 +173,24 @@
                         <img src="./img/social_media/003-github-logo.svg" alt="">
                         <figcaption class="author_name">John Doe</figcaption>
                     </figure>
-                    <div class="author_info"><p>lorem lorem i jeszcze koty lorem pasterz psów i kotów właściciel</p></div>
+                    <div class="author_info"><p>lorem lorem i jeszcze koty lorem pasterz psów i kotów właściciel</p>
+                    </div>
                 </div>
                 <div class="author1">
                     <figure class="author_photo">
                         <img src="./img/social_media/003-github-logo.svg" alt="">
                         <figcaption class="author_name">John Doe</figcaption>
                     </figure>
-                    <div class="author_info"><p>lorem lorem i jeszcze koty lorem pasterz psów i kotów właściciel</p></div>
+                    <div class="author_info"><p>lorem lorem i jeszcze koty lorem pasterz psów i kotów właściciel</p>
+                    </div>
                 </div>
                 <div class="author1">
                     <figure class="author_photo">
                         <img src="./img/social_media/003-github-logo.svg" alt="">
                         <figcaption class="author_name">John Doe</figcaption>
                     </figure>
-                    <div class="author_info"><p>lorem lorem i jeszcze koty lorem pasterz psów i kotów właściciel</p></div>
+                    <div class="author_info"><p>lorem lorem i jeszcze koty lorem pasterz psów i kotów właściciel</p>
+                    </div>
                 </div>
             </div>
 
@@ -190,6 +205,11 @@
     </footer>
     <!-- footer end -->
 </div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="./js/jQuery/jquery-3.3.1.min.js"></script>
+<script src="./js/bootstrap/bootstrap.bundle.js"></script>
 
 </body>
 </html>
