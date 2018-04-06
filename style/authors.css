@@ -1,95 +1,49 @@
 #authors {
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     width: 100%;
-    min-height: 400px;
-    background-color: #EAC67A;
+    min-height: 60vh;
     box-shadow: 0 0.01em 0 0.1em rgba(0,0,0,0.5);
 }
 
-.author_info {
-    width: 30%;
-    background-color: #984B43;
-    border-radius: 2em;
-    box-shadow: inset 0 0 1em 0.1em rgba(0,0,0,0.75);
-    margin-bottom: -3em;
-   }
+/*h3::after {
+    content: '';
+    height: 50px;
+    background: #3dbcaa;}*/
 
-
-.author_photo {
-    height: 8em;
-    width: 8em;
-    border-radius: 100%;
-    background-color: #EAC67A;
-    margin-left: auto;
-    margin-right: auto;
+.authors_head  {
+    font-size: 2em;
 }
-
-.author_name {
-    font-family: 'Bangers', cursive;
-    text-align: center;
-    letter-spacing: 0.1em;
-    line-height: 1.2em;
-    font-size: 1.5em;
-    margin-top:-3em;
-}
-
-.author_contact {
-    margin: 0 auto 1em auto;
+.author {
+    min-width: 90%;
+    min-height:80%;
     display: flex;
     justify-content: space-around;
-    height: 30%;
+}
+
+.author1{
+    width:30%;
+    min-height: 100%;
+    background: rgba(0,0,0,0.8);
+    margin-bottom: 0.2em;
+
+}
+
+.author_photo > img   {
     width: 100%;
 }
-
-.author_contacts--link {
-    width: 25%;
-    height: 4em;
-    text-decoration: none;
-    transition: margin-top 0.2s;
+.author_name{
+    text-align: center;
+    padding-top: 0.3em;
+    color: #ebebeb;
+    font-weight: bold;
+    font-size: 1.5em;
 }
-.author_contacts--link:active {
-    margin-top: -0.4em;
-}
-.author_contacts--link:visited {
-    text-decoration: none;
-}
-.mail_logo {
-    background-image: url('../img/social_media/001-black-back-closed-envelope-shape.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.git_logo {
-    background-image: url('../img/social_media/003-github-logo.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.face_logo {
-    background-image: url('../img/social_media/004-square.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.linkedin_logo {
-    background-image: url('../img/social_media/linkedin-logo.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.author_photo > img {
-    margin-top: -1.1em;
-}
-
-
-.social_icon_name {
-    display: none;
+.author_info {
+    text-align: center;
+    color: #ebebeb;
+    padding: 0.2em 0.1em 0.3em 0.1em;
+    font-size: 1em;
 }

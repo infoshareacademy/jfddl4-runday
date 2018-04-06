@@ -6,6 +6,7 @@
     <meta name="description" content="about running">
     <meta name="keywords" content="running run runner">
     <!-- STYLE -->
+    <link rel="stylesheet" href="style/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="stylesheet" type="text/css" href="style/features-info.css">
     <link rel="stylesheet" type="text/css" href="style/hero_section.css">
@@ -22,34 +23,40 @@
 <nav id="top-nav">
 
     <figure class="logo-main">
-        <img src="img/mountain-running-silhouette.svg" alt="runner log">
+        <a href="#container">
+            <img src="img/mountain-running-silhouette.svg" alt="runner log">
 
-        <figcaption>Run Day!</figcaption>
+            <figcaption>Run Day</figcaption>
+
+        </a>
     </figure>
     <figure class="nav-burger">
-        <figcaption class="nothing" style='display: none; float: left';>abra-cadabra and nothing ....</figcaption>
+        <figcaption class="nothing" style='display: none; float: left' ;>abra-cadabra and nothing ....</figcaption>
         <img src="./img/menu-button.svg" alt="menu">
-
     </figure>
 
-    <ol class="nav-chose--section">
-        <li><a class='button--nav-main' href="#functions">Functions</a></li>
-        <li><a class='button--nav-main' href="#authors">Author</a></li>
-        <li><a class='button--nav-main' href="#form-entry">Entry</a></li>
-
-    </ol>
+    <div class="nav-left--sec">
+        <ol class="nav-chose--section">
+            <li><a class='button--nav-main' href="#functions">Functions</a></li>
+            <li><a class='button--nav-main' href="#authors">Author</a></li>
+            <li><a class='button--nav-main' href="#form-entry">Entry</a></li>
+            <li><a class='button--nav-main' href="#form-entry">Entry</a></li>
+        </ol>
+    </div>
 
 </nav>
 <!--top nvigation end -->
 
-<div id="container">
+<div class="container-fluis">
 
     <main>
         <h1>RunDay</h1>
         <!-- hero section start - information product-->
         <section id="hero">
-            <h2>Welcome to Runners World!</h2>
+            <h2>Welcome to <br>Runners World!</h2>
+            <p><a href="#features">Read</a></p>
         </section>
+
         <!--header end-->
 
         <!--features and icons -->
@@ -68,10 +75,10 @@
                     </figure>
                 </a>
                 <a href="#feature3">
-                <figure class="feature-figure">
-                    <img src="flag.png" alt="ikona flagi" class="feature-icon">
-                    <figcaption class="icon-caption">Feature 3</figcaption>
-                </figure>
+                    <figure class="feature-figure">
+                        <img src="flag.png" alt="ikona flagi" class="feature-icon">
+                        <figcaption class="icon-caption">Feature 3</figcaption>
+                    </figure>
                 </a>
             </div>
         </section>
@@ -132,100 +139,86 @@
 
         </section>
         <!-- second section end-->
+
         <!-- post email info -->
         <section id="form-entry">
-            <div class="form-entry--ico">
+            <div class="row">
+                <div class="col-6">
 
-            </div>
-
-            <div class="form-entry--main">
-            <form class='form-entry--border' action="/#" method="post">
-                <label for="name">
-                    <input type="text" id="name" name="user_name" placeholder="Entry your name">
-                </label>
-                <label for="mail">
-                    <input type="email" id="mail" name="user_email" placeholder="Entry your e-mail">
-                </label>
-                <label for="msg">
-                    <textarea id="msg" name="user_message" rows="10" cols="50"> </textarea>
-                </label>
-                <p><input class='submit' type="submit" value="Send your message"></p>
-            </form>
+                </div>
+                <div class="col-6">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                   placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group text-right">
+                            <input class="btn btn-primary " type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
         <!-- authors - team information -->
         <section id="authors">
-            <section class="author_info">
-                <p class="author_name"> Michał Kozak<p>
-                <figure class="author_photo">
-                    <img src="img/authors_photo/003-businessman.svg" alt="michał_photo">
-                </figure>
-                <figure class="author_contact">
-                    <a href='#' class="author_contacts--link mail_logo">
-                <p class="social_icon_name">mail link</p>
-                </a>
-                <a href='#'class="author_contacts--link git_logo">
-                    <p class="social_icon_name">github link</p>
-                </a>
-                <a href='#'class="author_contacts--link linkedin_logo">
-                    <p class="social_icon_name">linkedin link</p>
-                </a>
-                <a href='#'class="author_contacts--link face_logo">
-                    <p class="social_icon_name">facebook link</p>
-                </a>
-                </figure>
-            </section>
-            <section class="author_info">
-                <p class="author_name"> Natalia Struk <p>
-                <figure class="author_photo">
-                    <img src="img/authors_photo/002-gothic.svg" alt="natalia_photo">
-                </figure>
-                <figure class="author_contact">
-                    <a href='#' class="author_contacts--link mail_logo">
-                <p class="social_icon_name">mail link</p>
-                </a>
-                <a href='#'class="author_contacts--link git_logo">
-                    <p class="social_icon_name">github link</p>
-                </a>
-                <a href='#'class="author_contacts--link linkedin_logo">
-                    <p class="social_icon_name">linkedin link</p>
-                </a>
-                <a href='#'class="author_contacts--link face_logo">
-                    <p class="social_icon_name">facebook link</p>
-                </a>
-                </figure>
-            </section>
-            <section class="author_info">
-                <p class="author_name"> Paweł Wasil <p>
-                <figure class="author_photo">
-                    <img src="img/authors_photo/001-steampunk.svg" alt="pawel_photo">
-                </figure>
-                <figure class="author_contact">
-                    <a href='#' class="author_contacts--link mail_logo">
-                        <p class="social_icon_name">mail link</p>
-                    </a>
-                    <a href='#'class="author_contacts--link git_logo">
-                        <p class="social_icon_name">github link</p>
-                    </a>
-                    <a href='#'class="author_contacts--link linkedin_logo">
-                        <p class="social_icon_name">linkedin link</p>
-                    </a>
-                    <a href='#'class="author_contacts--link face_logo">
-                        <p class="social_icon_name">facebook link</p>
-                    </a>
-                </figure>
-            </section>
+            <div class="authors_head"><h3>Meet Our Team</h3></div>
+            <div class="author">
+                <div class="author1">
+                    <figure class="author_photo">
+                        <img src="./img/social_media/003-github-logo.svg" alt="">
+                        <figcaption class="author_name">John Doe</figcaption>
+                    </figure>
+                    <div class="author_info"><p>lorem lorem i jeszcze koty lorem pasterz psów i kotów właściciel</p>
+                    </div>
+                </div>
+                <div class="author1">
+                    <figure class="author_photo">
+                        <img src="./img/social_media/003-github-logo.svg" alt="">
+                        <figcaption class="author_name">John Doe</figcaption>
+                    </figure>
+                    <div class="author_info"><p>lorem lorem i jeszcze koty lorem pasterz psów i kotów właściciel</p>
+                    </div>
+                </div>
+                <div class="author1">
+                    <figure class="author_photo">
+                        <img src="./img/social_media/003-github-logo.svg" alt="">
+                        <figcaption class="author_name">John Doe</figcaption>
+                    </figure>
+                    <div class="author_info"><p>lorem lorem i jeszcze koty lorem pasterz psów i kotów właściciel</p>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <!-- authors - end -->
     </main>
 
     <!--footer start -->
     <footer id="footer_main">
-        <p>&copy; RunDay!</p>
-
+        <div>
+            <p>&copy; RunDay. Wszystkie prawa zastrzeżone.</p>
+        </div>
+        <div id="social_media">
+            <img src="img/social_media/if_facebook_online_social_media_734399.svg">
+            <img src="img/social_media/if_instagram_online_social_media_734394.svg">
+            <img src="img/social_media/if_online_social_media_twitter_734377.svg">
+            <img src="img/social_media/if_youtube_online_social_media_734361.svg">
+            <img src="img/social_media/if_rss_online_social_media_734370.svg">
+        </div>
     </footer>
-    <!-- footer end -->
+
+
 </div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="./js/jQuery/jquery-3.3.1.min.js"></script>
+<script src="./js/bootstrap/bootstrap.bundle.js"></script>
 
 </body>
 </html>
