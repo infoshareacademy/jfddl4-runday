@@ -10,14 +10,13 @@
     background: #ebebeb;
 
 }
-.l_sticky {
-    float: right;
-}
+
 .nav-link {
     color: #ebebeb;
 }
-
-
+.container-fluid{
+    padding: 0;
+}
 .navbar-brand:hover, .nav-link:hover {
     color: #ed1c24;
 }
