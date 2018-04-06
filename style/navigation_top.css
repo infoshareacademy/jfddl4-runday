@@ -17,6 +17,15 @@
     color: #ebebeb;
 }
 
+
 .navbar-brand:hover, .nav-link:hover {
     color: #ed1c24;
 }
+
+.nav-link-name {
+    font-size: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
