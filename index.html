@@ -22,7 +22,8 @@
 <!--top navigation start - sticky navbar -->
 <nav id="top-nav" class="navbar navbar-expand-lg fixed-top dark_them">
     <a class="navbar-brand dark_them_fon" href="#">
-        <img class="logo-main" src="img/mountain-running-silhouette.svg"><p class="h1 l_sticky pl-2">Run Day</p>
+        <img class="logo-main" src="img/mountain-running-silhouette.svg">
+        <p class="h1 l_sticky pl-2">Run Day</p>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +31,7 @@
     </button>
     <div class="collapse navbar-collapse " id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item active home">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -253,6 +254,14 @@
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="./js/jQuery/jquery-3.3.1.min.js"></script>
 <script src="./js/bootstrap/bootstrap.bundle.js"></script>
+<script>
+    $(".home").click(function () {
+        var offset = 20; //Offset of 20px
 
+        $('html, body').animate({
+            scrollTop: $("#features-info").offset().top + offset
+        }, 2000);
+    });
+</script>
 </body>
 </html>
