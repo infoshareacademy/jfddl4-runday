@@ -1,0 +1,22 @@
+/*  NAVBAR  */
+#top-nav {
+    box-shadow: 0 0.4em 0.6em 0 rgba(0,0,0,0.70);
+}
+
+.logo-main{
+    max-width: 3em;
+    max-height: 3em;
+    border-radius: 5px;
+    background: #ebebeb;
+
+}
+.l_sticky {
+    float: right;
+}
+.nav-link {
+    color: #ebebeb;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #ed1c24;
+}
