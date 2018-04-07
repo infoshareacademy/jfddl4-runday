@@ -64,7 +64,7 @@
 
 <div class="container-fluid">
 
-<!-- this element anchor position top of side -->
+    <!-- this element anchor position top of side -->
     <span id="go-top"></span>
 
     <h1>RunDay</h1>
@@ -72,7 +72,11 @@
     <!-- hero section start - information product-->
     <section id="hero">
         <h2 class="h2-hero"><span class="p-hero">Run</span> With Us</h2>
-        <p><a href="#features">Read More</a></p>
+        <p class="h5-hero text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <br>A aspernatur dolorem facere hic illum
+            ipsam optio quasi recusandae.
+        </p>
+        <p><a class="nav-entry" href="#features">Join Us!</a></p>
     </section>
 
     <!--header end-->
@@ -172,9 +176,15 @@
                         </div>
                         <input class="form-control" disabled value="Private policy. To Agree.">
                     </div>
-                    <figure class="float-right">
-                        <img class="ico_siz_6" src="./img/mountain-running-silhouette.svg" alt="">
-                    </figure>
+                    <span class="d-flex align-items-center">
+                        <i class="flaticon-phone-call"></i>
+                        <p class="form-contact">tel: (88) 888 888 888</p>
+                    </span>
+
+                    <span class="d-flex align-items-center">
+                        <i class="flaticon-mail"></i>
+                        <p class="form-contact">e-mail: runday@runday.com</p>
+                    </span>
                 </div>
 
             </div>
@@ -189,7 +199,8 @@
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="email" class="h6">Email</label>
-                                <input type="email" class="form-control" id="email" name="emails[]" placeholder="Enter email" required>
+                                <input type="email" class="form-control" id="email" name="emails[]"
+                                       placeholder="Enter email" required>
                             </div>
                         </div>
                         <input type="hidden" name="subject" value="Tytuł">
@@ -197,13 +208,14 @@
                         <div class="row dark_them_b_top">
                             <div class="col-12 form-group px-4">
                                 <label for="message" class="h6 ">Message</label>
-                                <textarea id="message" class="form-control" rows="5" name="message" placeholder="Enter your message"
+                                <textarea id="message" class="form-control" rows="5"  cols="30" maxlength="100" name="message"
+                                          placeholder="Enter your message"
                                           required></textarea>
                             </div>
                         </div>
-                        <input type="hidden" name="from" value="mateusz.choma@infoshareacademy.com">
+                        <input type="hidden" name="from" value="riddik27@o2.pl">
                         <input type="hidden" name="fromName" value="RunDay">
-                        <input type="hidden" name="redirect" value="https://google.com">
+                        <input type="hidden" name="redirect" value="./email_go.html">
                         <div class="text-right">
                             <input type="submit" id="form-submit" class="btn dark_them_btn" value="Submit message">
                         </div>

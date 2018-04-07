@@ -8,7 +8,7 @@ $(document).ready(function() {
         });
 
     $(".functions").click(function () {
-        var offset = -75; //Offset of 75px
+        var offset = -75; //Offset of -75px
 
         $('html, body').animate({
             scrollTop: $("#features").offset().top + offset
@@ -16,7 +16,7 @@ $(document).ready(function() {
     });
 
     $(".nav-entry").click(function () {
-        var offset = -75; //Offset of 75px
+        var offset = -75; //Offset of -75px
 
         $('html, body').animate({
             scrollTop: $("#form-entry").offset().top + offset
@@ -24,11 +24,13 @@ $(document).ready(function() {
     });
 
     $(".authors").click(function () {
-        var offset = -75; //Offset of 75px
+        var offset = -75; //Offset of -75px
 
         $('html, body').animate({
             scrollTop: $("#authors").offset().top + offset
         }, 2000);
     });
+
+
 
 });
