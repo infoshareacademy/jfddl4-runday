@@ -44,13 +44,13 @@
                     <span class="nav-link-name">FUNCTIONS</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center" href="#form-entry">
+                <a class="nav-link d-flex align-items-center nav-entry" href="#form-entry">
                     <i class="flaticon-mail"></i>
                     <span class="nav-link-entry">ENTRY</span></a>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center" href="#authors">
+                <a class="nav-link d-flex align-items-center authors" href="#authors">
                     <i class="flaticon-users"></i>
                     <span class="nav-link-authors">AUTHORS</span></a>
                 </a>
@@ -63,6 +63,8 @@
 <!--top nvigation end -->
 
 <div class="container-fluid">
+
+<!-- this element anchor position top of side -->
     <span id="go-top"></span>
 
     <h1>RunDay</h1>
@@ -280,14 +282,6 @@
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="./js/jQuery/jquery-3.3.1.min.js"></script>
 <script src="./js/bootstrap/bootstrap.bundle.js"></script>
-<script>
-    $("#top-nav").click(function () {
-        var offset = -40; //Offset of 20px
-
-        $('html, body').animate({
-            scrollTop: $("#form-entry").offset().top + offset
-        }, 2000);
-    });
-</script>
+<script src="./js/nav_scrool.js"></script>
 </body>
 </html>
