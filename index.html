@@ -171,7 +171,7 @@
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
-                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                <input id="acepted-policy" type="checkbox" aria-label="Checkbox for following text input">
                             </div>
                         </div>
                         <input class="form-control" disabled value="Private policy. To Agree.">
@@ -208,7 +208,8 @@
                         <div class="row dark_them_b_top">
                             <div class="col-12 form-group px-4">
                                 <label for="message" class="h6 ">Message</label>
-                                <textarea id="message" class="form-control" rows="5"  cols="30" maxlength="100" name="message"
+                                <textarea id="message" class="form-control" rows="5" cols="30" maxlength="100"
+                                          name="message"
                                           placeholder="Enter your message"
                                           required></textarea>
                             </div>
@@ -217,7 +218,7 @@
                         <input type="hidden" name="fromName" value="RunDay">
                         <input type="hidden" name="redirect" value="./email_go.html">
                         <div class="text-right">
-                            <input type="submit" id="form-submit" class="btn dark_them_btn" value="Submit message">
+                            <input type="submit" id="form-submit" class="btn dark_them_btn" disabled value="Submit message">
                         </div>
                     </div>
                 </form>
@@ -295,5 +296,6 @@
 <script src="./js/jQuery/jquery-3.3.1.min.js"></script>
 <script src="./js/bootstrap/bootstrap.bundle.js"></script>
 <script src="./js/nav_scrool.js"></script>
+<script src="./js/private_policy.js"></script>
 </body>
 </html>
