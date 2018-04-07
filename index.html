@@ -24,13 +24,13 @@
 <nav id="top-nav" class="navbar navbar-expand-lg fixed-top dark_them">
     <a class="navbar-brand dark_them_fon d-flex align-items-center home" href="#">
         <img class="logo-main" src="img/mountain-running-silhouette.svg">
-        <span class="h1 pl-2">Run Day</span>
+        <span class="nav-h1 pl-2">Run Day</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link d-flex align-items-center home" href="#">
@@ -63,6 +63,7 @@
 <!--top nvigation end -->
 
 <div class="container-fluid">
+    <span id="go-top"></span>
 
     <h1>RunDay</h1>
 
@@ -280,11 +281,11 @@
 <script src="./js/jQuery/jquery-3.3.1.min.js"></script>
 <script src="./js/bootstrap/bootstrap.bundle.js"></script>
 <script>
-    $(".functions").click(function () {
-        var offset = 20; //Offset of 20px
+    $("#top-nav").click(function () {
+        var offset = -40; //Offset of 20px
 
         $('html, body').animate({
-            scrollTop: $("#features-info").offset().top + offset
+            scrollTop: $("#form-entry").offset().top + offset
         }, 2000);
     });
 </script>
