@@ -15,156 +15,170 @@
     <link rel="stylesheet" type="text/css" href="style/footer.css">
     <link rel="stylesheet" type="text/css" href="style/form_main.css">
     <link rel="stylesheet" type="text/css" href="style/product.css">
-
+    <link rel="stylesheet" type="text/css" href="img/nav_ico/flaticon.css">
 </head>
 <body>
-
 <!--top navigation start - sticky navbar -->
 <nav id="top-nav" class="navbar navbar-expand-lg fixed-top dark_them">
-    <a class="navbar-brand dark_them_fon" href="#">
+    <a class="navbar-brand dark_them_fon d-flex align-items-center home" href="#">
         <img class="logo-main" src="img/mountain-running-silhouette.svg">
-        <p class="h1 l_sticky pl-2">Run Day</p>
+        <span class="nav-h1 pl-2">Run Day</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="flaticon-artificial-intelligence nav-link"></span>
     </button>
-    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active home">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link d-flex align-items-center home" href="#">
+                    <i class="flaticon-construction"></i>
+                    <span class="nav-link-home">HOME</span>
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#features">Functions</a>
+                <a class="nav-link d-flex align-items-center functions" href="#features">
+                    <i class="flaticon-technology"></i>
+                    <span class="nav-link-name">FUNCTIONS</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#form-entry">Entry</a>
+                <a class="nav-link d-flex align-items-center nav-entry" href="#form-entry">
+                    <i class="flaticon-mail"></i>
+                    <span class="nav-link-entry">ENTRY</span></a>
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#authors">Authors</a>
+                <a class="nav-link d-flex align-items-center authors" href="#authors">
+                    <i class="flaticon-users"></i>
+                    <span class="nav-link-authors">AUTHORS</span></a>
+                </a>
             </li>
         </ul>
     </div>
 </nav>
-
-
 <!--top nvigation end -->
-
-<div class="container-fluis">
-
-    <main>
-        <h1>RunDay</h1>
-        <!-- hero section start - information product-->
-        <section id="hero">
-            <h2>Welcome to <br>Runners World!</h2>
-            <p><a href="#features">Read</a></p>
-        </section>
-
-        <!--header end-->
-
-        <!--features and icons -->
-        <section id="features">
-            <div class="features-flex-container">
-                <a href="#feature1">
-                    <figure class="feature-figure">
-                        <img src="flag.png" alt="ikona flagi" class="feature-icon">
-                        <figcaption class="icon-caption">Feature 1</figcaption>
-                    </figure>
-                </a>
-                <a href="#feature2">
-                    <figure class="feature-figure">
-                        <img src="flag.png" alt="ikona flagi" class="feature-icon">
-                        <figcaption class="icon-caption">Feature 2</figcaption>
-                    </figure>
-                </a>
-                <a href="#feature3">
-                    <figure class="feature-figure">
-                        <img src="flag.png" alt="ikona flagi" class="feature-icon">
-                        <figcaption class="icon-caption">Feature 3</figcaption>
-                    </figure>
-                </a>
-            </div>
-        </section>
-        <!--features end-->
-
-        <!--first section start - product function -->
-        <section id="features-info">
-
-            <div class="features-info-flex-container">
-                <figure class="feature-info-image"><img src="flag.png" alt="ikona flagi"
-                                                        class="feature-info-image-size">
+<div class="container-fluid">
+    <!-- this element anchor position top of side -->
+    <span id="go-top"></span>
+    <h1>RunDay</h1>
+    <!-- hero section start - information product-->
+    <section id="hero">
+        <h2 class="h2-hero"><span class="p-hero">Run</span> With Us</h2>
+        <p class="h5-hero text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <br>A aspernatur dolorem facere hic illum
+            ipsam optio quasi recusandae.
+        </p>
+        <p><a class="nav-entry" href="#features">Join Us!</a></p>
+    </section>
+    <!--header end-->
+    <!--features and icons -->
+    <section id="features">
+        <div class="features-flex-container">
+            <a href="#feature1">
+                <figure class="feature-figure">
+                    <img src="flag.png" alt="ikona flagi" class="feature-icon">
+                    <figcaption class="icon-caption">Feature 1</figcaption>
                 </figure>
-                <article id="feature1" class="features-info-article">
-                    <h3>Feature 1</h3>
-                    n your github fork, you need to keep your master branch
-                    clean, by clean I mean without any changes, like that you can create at
-                    any time a branch from your master. Each time that you want to commit a
-                    bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
-                </article>
-
-            </div>
-
-            <div class="features-info-flex-container features-info-flex-container--reversed">
-                <figure class="feature-info-image"><img src="flag.png" alt="ikona flagi"
-                                                        class="feature-info-image-size">
+            </a>
+            <a href="#feature2">
+                <figure class="feature-figure">
+                    <img src="flag.png" alt="ikona flagi" class="feature-icon">
+                    <figcaption class="icon-caption">Feature 2</figcaption>
                 </figure>
-                <article id="feature2" class="features-info-article">
-                    <h3>Feature 2</h3>
-                    n your github fork, you need to keep your master branch
-                    clean, by clean I mean without any changes, like that you can create at
-                    any time a branch from your master. Each time that you want to commit a
-                    bug or a feature, you need to create a branch for it, which will be a copy
-                    of your master branch.
-                </article>
-
-            </div>
-
-            <div class="features-info-flex-container">
-                <figure class="feature-info-image"><img src="flag.png" alt="ikona flagi"
-                                                        class="feature-info-image-size">
+            </a>
+            <a href="#feature3">
+                <figure class="feature-figure">
+                    <img src="flag.png" alt="ikona flagi" class="feature-icon">
+                    <figcaption class="icon-caption">Feature 3</figcaption>
                 </figure>
-                <article id="feature3" class="features-info-article">
-                    <h3>Feature 3</h3>
-                    n your github fork, you need to keep your master branch
-                    clean, by clean I mean without any changes, like that you can create at
-                    any time a branch from your master. Each time that you want to commit a
-                    bug or a feature, you need to create a branch for it, which will be a copy
-                    of your master branch.
-                </article>
+            </a>
+        </div>
+    </section>
+    <!--features end-->
+    <!--first section start - product function -->
+    <section id="features-info">
 
-            </div>
+        <div class="features-info-flex-container">
+            <figure class="feature-info-image"><img src="flag.png" alt="ikona flagi"
+                                                    class="feature-info-image-size">
+            </figure>
+            <article id="feature1" class="features-info-article">
+                <h3>Feature 1</h3>
+                n your github fork, you need to keep your master branch
+                clean, by clean I mean without any changes, like that you can create at
+                any time a branch from your master. Each time that you want to commit a
+                bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
+            </article>
 
-        </section>
-        <!-- first section end-->
+        </div>
 
+        <div class="features-info-flex-container features-info-flex-container--reversed">
+            <figure class="feature-info-image"><img src="flag.png" alt="ikona flagi"
+                                                    class="feature-info-image-size">
+            </figure>
+            <article id="feature2" class="features-info-article">
+                <h3>Feature 2</h3>
+                n your github fork, you need to keep your master branch
+                clean, by clean I mean without any changes, like that you can create at
+                any time a branch from your master. Each time that you want to commit a
+                bug or a feature, you need to create a branch for it, which will be a copy
+                of your master branch.
+            </article>
 
-        <!-- post email info -->
-        <section id="form-entry">
-            <div class="row dark_them p-5">
-                <div class="col-sm-12 col-lg-6">
-                    <div class=" m-4 p-4">
-                        <h4 class="h2 dark_them_fon">Run Day</h4>
-                        <h5 class="4">Checkout event and added new</h5>
-                        <p>Lorem ipsum dolor amet, consectetur adipisicing elit. Accusantium adipisci, autem eaque
-                            eligendi
-                            et facere harum odit placeat porro quis quo rem unde voluptate! Explicabo qui, rem. Enim,
-                            explicabo minus?</p>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <input type="checkbox" aria-label="Checkbox for following text input">
-                                </div>
+        </div>
+
+        <div class="features-info-flex-container">
+            <figure class="feature-info-image"><img src="flag.png" alt="ikona flagi"
+                                                    class="feature-info-image-size">
+            </figure>
+            <article id="feature3" class="features-info-article">
+                <h3>Feature 3</h3>
+                n your github fork, you need to keep your master branch
+                clean, by clean I mean without any changes, like that you can create at
+                any time a branch from your master. Each time that you want to commit a
+                bug or a feature, you need to create a branch for it, which will be a copy
+                of your master branch.
+            </article>
+
+        </div>
+
+    </section>
+    <!-- first section end-->
+    <!-- post email info -->
+    <section id="form-entry">
+        <div class="row dark_them p-5">
+            <div class="col-sm-12 col-lg-6">
+                <div class=" m-4 p-4">
+                    <h4 class="h2 dark_them_fon">Run Day</h4>
+                    <h5 class="4">Checkout event and added new</h5>
+                    <p>Lorem ipsum dolor amet, consectetur adipisicing elit. Accusantium adipisci, autem eaque
+                        eligendi
+                        et facere harum odit placeat porro quis quo rem unde voluptate! Explicabo qui, rem. Enim,
+                        explicabo minus?</p>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <input id="acepted-policy" type="checkbox"
+                                       aria-label="Checkbox for following text input">
                             </div>
-                            <input class="form-control" disabled value="Private policy. To Agree.">
                         </div>
-                        <figure class="float-right">
-                            <img class="ico_siz_6" src="./img/mountain-running-silhouette.svg" alt="">
-                        </figure>
+                        <input class="form-control" disabled value="Private policy. To Agree.">
                     </div>
+                    <span class="d-flex align-items-center">
+                        <i class="flaticon-phone-call"></i>
+                        <p class="form-contact">tel: (88) 888 888 888</p>
+                    </span>
 
+                    <span class="d-flex align-items-center">
+                        <i class="flaticon-mail"></i>
+                        <p class="form-contact">e-mail: runday@runday.com</p>
+                    </span>
                 </div>
 
-                <div class="col-sm-12 col-lg-6">
+            </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <form action="https://emaillabs-sender.herokuapp.com/" method="POST">
                     <div class="m-4 p-4">
                         <div class="row px-4 dark_them_b_top">
                             <div class="form-group col-sm-6">
@@ -173,89 +187,148 @@
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="email" class="h6">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                                <input type="email" class="form-control" id="email" name="emails[]"
+                                       placeholder="Enter email" required>
                             </div>
                         </div>
+                        <input type="hidden" name="subject" value="Tytuł">
+
                         <div class="row dark_them_b_top">
                             <div class="col-12 form-group px-4">
                                 <label for="message" class="h6 ">Message</label>
-                                <textarea id="message" class="form-control" rows="5" placeholder="Enter your message"
+                                <textarea id="message" class="form-control" rows="5" cols="30" maxlength="100"
+                                          name="message"
+                                          placeholder="Enter your message"
                                           required></textarea>
                             </div>
                         </div>
-
+                        <input type="hidden" name="from" value="riddik27@o2.pl">
+                        <input type="hidden" name="fromName" value="RunDay">
+                        <input type="hidden" name="redirect" value="./email_go.html">
                         <div class="text-right">
-                            <input type="submit" id="form-submit" class="btn dark_them_btn" value="Submit message">
+                            <input type="submit" id="form-submit" class="btn dark_them_btn" disabled
+                                   value="Submit message">
                         </div>
+                    </div>
+                </form>
+            </div>
+        </div>
 
 
+    </section>
+    <!-- authors - team information -->
+    <section id="authors" class="bg-light">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <br>
+                <p class="section-heading text-uppercase team_h" style="font-size: 50px;">Our Team</p>
+                <h5 class="section-subheading text-muted">RunDay Team is a group of people who make challenges and
+                    adventures. Each of us has a specific task, we are completely different, but one thing connects us -
+                    a common passion.</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="img/team/9.jpg" alt="">
+                    <h4>Michał Kozak</h4>
+                    <p class="mx-auto text-muted">Junior Frontend Developer</p>
+                    <img class="team_img" src="img/team/fb.svg">
+                    <img class="team_img" src="img/team/twitt.svg">
+                    <img class="team_img" src="img/team/in.svg">
+                    <br>
+                    <br>
+                    <p>
+                        <a class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+                           aria-expanded="false" aria-controls="multiCollapseExample1">MORE INFO</a>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body">
+                                    I am a graduate of Maria-Curie Skłodowska University. I have graduated in Management
+                                    (specialization: information systems in administration and business).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="img/team/10.jpg" alt="">
+                    <h4>Natalia Struk</h4>
+                    <p class="text-muted">Junior Frontend Developer</p>
+                    <img class="team_img" src="img/team/fb.svg">
+                    <img class="team_img" src="img/team/twitt.svg">
+                    <img class="team_img" src="img/team/in.svg">
+                    <br>
+                    <br>
+                    <p>
+                        <a class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample2" role="button"
+                           aria-expanded="false" aria-controls="multiCollapseExample2">MORE INFO</a>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                <div class="card card-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-
-        </section>
-        <!-- authors - team information -->
-        <section id="authors">
-            <div class="text-center pb-4 "><h3 class="h1">Meet Our Team</h3></div>
-            <div class="row text-center">
-                <div class="card col-12 col-lg-3 m-auto">
-                    <img class="card-img-top img_wh_20 mx-auto" src="img/social_media/003-github-logo.svg"
-                         alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="h2">Nicole Stretch</h5>
-                        <p class="card-text dark_them_b_top">Gdy nie miał głos zabierać. Umilkli wszyscy ją darował po
-                            której wytryskał rumieniec, ilekroć z łez, które przed którego posiadaniem pan Sędzia nigdy
-                            na sąd Pańskiej
-                            cioci. Choć Sędzia sam markiz przybrał tytuł markiza. Jakoż, kiedy reszta świat
-                        </p>
+            <div class="col-sm-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="img/team/11.jpg" alt="">
+                    <h4>Paweł Wasil</h4>
+                    <p class="text-muted">Junior Frontend Developer</p>
+                    <img class="team_img" src="img/team/fb.svg">
+                    <img class="team_img" src="img/team/twitt.svg">
+                    <img class="team_img" src="img/team/in.svg">
+                    <br>
+                    <br>
+                    <p>
+                        <a class="btn btn-dark" data-toggle="collapse" href="#multiCollapseExample3" role="button"
+                           aria-expanded="false" aria-controls="multiCollapseExample3">MORE INFO</a>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="multiCollapseExample3">
+                                <div class="card card-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card col-12 col-lg-3 m-auto dark_them">
-                    <img class="card-img-top img_wh_20 mx-auto" src="img/social_media/003-github-logo.svg"
-                         alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="h2">John Doe</h5>
-                        <p class="card-text dark_them_b_top">Gdy nie miał głos zabierać. Umilkli wszyscy ją darował po
-                            której wytryskał rumieniec, ilekroć z łez, które przed którego posiadaniem pan Sędzia nigdy
-                            na sąd Pańskiej
-                            cioci. Choć Sędzia sam markiz przybrał tytuł markiza. Jakoż, kiedy reszta świat
-                        </p>
-                    </div>
-                </div>
-                <div class="card col-12 col-lg-3 m-auto">
-                    <img class="card-img-top img_wh_20 mx-auto" src="img/social_media/003-github-logo.svg"
-                         alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="h2">Bob Bold</h5>
-                        <p class="card-text dark_them_b_top">Gdy nie miał głos zabierać. Umilkli wszyscy ją darował po
-                            której wytryskał rumieniec, ilekroć z łez, które przed którego posiadaniem pan Sędzia nigdy
-                            na sąd Pańskiej
-                            cioci. Choć Sędzia sam markiz przybrał tytuł markiza. Jakoż, kiedy reszta świat
-                        </p>
-                    </div>
-                </div>
-
+                <br>
             </div>
-
-        </section>
-        <!-- authors - end -->
+        </div>
+    </section>
+    <!-- authors - end -->
     </main>
 
-    <!--footer start -->
-    <footer id="footer_main">
-        <div>
-            <p>&copy; RunDay. Wszystkie prawa zastrzeżone.</p>
+    <!-- FOOTER START -->
+    <div class="row d-flex align-items-center" id="footer">
+        <div class="col-6 text-center">
+            <p>&copy; <span class="dark_them_fon">RunDay.</span> Wszystkie prawa zastrzeżone.</p>
         </div>
-        <div id="social_media">
+        <div class="col-6 text-center" id="social_media">
             <img src="img/social_media/if_facebook_online_social_media_734399.svg">
             <img src="img/social_media/if_instagram_online_social_media_734394.svg">
             <img src="img/social_media/if_online_social_media_twitter_734377.svg">
             <img src="img/social_media/if_youtube_online_social_media_734361.svg">
             <img src="img/social_media/if_rss_online_social_media_734370.svg">
         </div>
-    </footer>
-
+    </div>
+    <!-- FOOTER END -->
 
 </div>
 
@@ -263,14 +336,7 @@
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="./js/jQuery/jquery-3.3.1.min.js"></script>
 <script src="./js/bootstrap/bootstrap.bundle.js"></script>
-<script>
-    $(".home").click(function () {
-        var offset = 20; //Offset of 20px
-
-        $('html, body').animate({
-            scrollTop: $("#features-info").offset().top + offset
-        }, 2000);
-    });
-</script>
+<script src="./js/nav_scrool.js"></script>
+<script src="./js/private_policy.js"></script>
 </body>
 </html>

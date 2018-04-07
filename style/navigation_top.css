@@ -4,19 +4,24 @@
 }
 
 .logo-main{
-    max-width: 3em;
-    max-height: 3em;
+    max-width: 2em;
+    max-height: 2em;
     border-radius: 5px;
     background: #ebebeb;
 
 }
-.l_sticky {
-    float: right;
-}
+
 .nav-link {
     color: #ebebeb;
 }
-
+.container-fluid{
+    padding: 0;
+}
 .navbar-brand:hover, .nav-link:hover {
     color: #ed1c24;
 }
+
+.nav-h1 {
+    font-size: 2rem;
+}
+

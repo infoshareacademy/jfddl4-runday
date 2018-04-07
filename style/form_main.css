@@ -42,3 +42,7 @@ dar_theme_foc:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
 }
 
+.form-contact {
+    margin: auto 0 auto 0;
+
+}
