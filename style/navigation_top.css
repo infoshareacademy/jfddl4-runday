@@ -25,3 +25,6 @@
     font-size: 2rem;
 }
 
+.nav-link.active {
+    background: green !important;
+}
