@@ -1,5 +1,5 @@
-inView('.rounded-circle')
+inView('.team-member')
     .on('enter', function () {
         $('.rounded-circle')
-            .fadeOut('slow')
-                })
+            .fadeIn(4000)
+    })
