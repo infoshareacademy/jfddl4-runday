@@ -5,6 +5,7 @@
     <title>RUN RUN RUN</title>
     <meta name="description" content="about running">
     <meta name="keywords" content="running run runner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- STYLE -->
     <link rel="stylesheet" href="style/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
@@ -18,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="img/nav_ico/flaticon.css">
     <link rel="stylesheet" type="text/css" href="style/cookieStyle.css" />
 </head>
-<body>
+<body data-spy="scroll" data-target="#top-nav" data-offset="100">
 
 <!--top navigation start - sticky navbar -->
 <nav id="top-nav" class="navbar navbar-expand-lg fixed-top dark_them">
@@ -31,9 +32,9 @@
         <span class="flaticon-artificial-intelligence nav-link"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto nav-pills">
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center home" href="#">
+                <a class="nav-link d-flex align-items-center home" href="#hero">
                     <i class="flaticon-construction"></i>
                     <span class="nav-link-home">HOME</span>
                 </a>
@@ -55,6 +56,9 @@
             </li>
         </ul>
     </div>
+
+        <a class="go_top" href="#go-top" style="display: none;">Go top!</a>
+
 </nav>
 
 
@@ -120,15 +124,6 @@
                 </a>
             </div>
         </section>
-
-
-
-
-
-
-
-
-
         <!--header end-->
         <!--features and icons -->
         <section id="features">
@@ -273,7 +268,8 @@
                             </div>
                             <input type="hidden" name="from" value="riddik27@o2.pl">
                             <input type="hidden" name="fromName" value="RunDay">
-                            <input type="hidden" name="redirect" value="http://runday.jfddl4.is-academy.pl/email_go.html">
+                            <input type="hidden" name="redirect"
+                                   value="http://runday.jfddl4.is-academy.pl/email_go.html">
                             <div class="text-right">
                                 <input type="submit" id="form-submit" class="btn dark_them_btn" disabled
                                        value="Submit message">
@@ -300,7 +296,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/9.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="img/team/9.jpg" alt="" style="display: none;">
                         <h4>Michał Kozak</h4>
                         <p class="mx-auto text-muted">Junior Frontend Developer</p>
                         <img class="team_img" src="img/team/fb.svg">
@@ -327,7 +323,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/10.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="img/team/10.jpg" alt="" style="display: none;">
                         <h4>Natalia Struk</h4>
                         <p class="text-muted">Junior Frontend Developer</p>
                         <img class="team_img" src="img/team/fb.svg">
@@ -356,7 +352,7 @@
 
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/11.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="img/team/11.jpg" alt="" style="display: none;">
                         <h4>Paweł Wasil</h4>
                         <p class="text-muted">Junior Frontend Developer</p>
                         <img class="team_img" src="img/team/fb.svg">
@@ -407,10 +403,14 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
 <script src="./js/jQuery/jquery-3.3.1.min.js"></script>
 <script src="./js/bootstrap/bootstrap.bundle.js"></script>
 <script src="./js/nav_scrool.js"></script>
 <script src="./js/private_policy.js"></script>
+<script src="./js/in-view.min.js"></script>
+<script src="./js/animatedPhoto.js"></script>
+<script src="./js/script.js"></script>
 <script src="./js/cookieinfo.js"></script>
 <script src="./js/cookieinfo-afterclick.js"></script>
 </body>
