@@ -30,7 +30,7 @@ $(document).ready(function() {
     $(".go_top").click(function () {
         var offset = 0; //Offset of 00px
         $('html, body').animate({
-            scrollTop: $("#go-top").offset().top + offset
+            scrollTop: $("#go_top").offset().top + offset
         }, 2000);
     });
 
