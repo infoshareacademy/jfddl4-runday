@@ -1,16 +1,4 @@
-#hero {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    background: url('../img/woman_run.jpg') center no-repeat fixed;
-    /*<a href="http://www.freepik.com">Designed by senivpetro / Freepik</a>*/
-    background-size: cover;
-    box-shadow: 0 0.01em 0 0.1em rgba(0, 0, 0, 0.5);
-    min-height: 100vh;
-}
+
 
 h1 {
     display: none;
@@ -52,4 +40,24 @@ h1 {
 
 .h5-hero {
     font-size: 2vw;
+}
+
+.btn-runday{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.center-runday{
+    text-align: center;
+}
+
+.text-runday{
+    font-size: 70px;
+}
+
+.btn-runday-car{
+    padding: 15px;
 }

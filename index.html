@@ -5,6 +5,7 @@
     <title>RUN RUN RUN</title>
     <meta name="description" content="about running">
     <meta name="keywords" content="running run runner">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- STYLE -->
     <link rel="stylesheet" href="style/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
@@ -16,8 +17,9 @@
     <link rel="stylesheet" type="text/css" href="style/form_main.css">
     <link rel="stylesheet" type="text/css" href="style/product.css">
     <link rel="stylesheet" type="text/css" href="img/nav_ico/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="style/cookieStyle.css" />
 </head>
-<body>
+<body data-spy="scroll" data-target="#top-nav" data-offset="100">
 
 <!--top navigation start - sticky navbar -->
 <nav id="top-nav" class="navbar navbar-expand-lg fixed-top dark_them">
@@ -30,9 +32,9 @@
         <span class="flaticon-artificial-intelligence nav-link"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto nav-pills">
             <li class="nav-item">
-                <a class="nav-link d-flex align-items-center home" href="#">
+                <a class="nav-link d-flex align-items-center home" href="#hero">
                     <i class="flaticon-construction"></i>
                     <span class="nav-link-home">HOME</span>
                 </a>
@@ -54,6 +56,9 @@
             </li>
         </ul>
     </div>
+
+        <a class="go_top" href="#go-top" style="display: none;">Go top!</a>
+
 </nav>
 
 
@@ -62,17 +67,62 @@
 <div class="container-fluid">
 
     <main>
-        <!-- this element anchor position top of side -->
-        <span id="go-top"></span>
-        <h1>RunDay</h1>
-        <!-- hero section start - information product-->
+
+
+
         <section id="hero">
-            <h2 class="h2-hero"><span class="p-hero">Run</span> With Us</h2>
-            <p class="h5-hero text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                <br>A aspernatur dolorem facere hic illum
-                ipsam optio quasi recusandae.
-            </p>
-            <p><a class="nav-entry" href="#features">Join Us!</a></p>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+
+                        <img class="d-block w-100 hero" src="img/hero/active-activity-aerobic-905336__2_.jpg" alt="First slide">
+
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="text-uppercase text-runday">Simple, intuitive and light...</h2>
+                            <br>
+                            <button type="button" class="btn btn-danger btn-runday-car">MORE INFO</button>
+                            <button type="button" class="btn btn-dark btn-runday-car">DOWNLOAD</button>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 hero" src="img/hero/woman_run.jpg" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="text-uppercase text-runday">Download applications...</h2>
+                            <br>
+                            <button type="button" class="btn btn-danger btn-runday-car">MORE INFO</button>
+                            <button type="button" class="btn btn-dark btn-runday-car">DOWNLOAD</button>
+
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 hero" src="img/hero/running-runner-long-distance-fitness-40751.jpg" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="text-uppercase text-runday">Start playing...</h2>
+                            <br>
+                            <button type="button" class="btn btn-danger btn-runday-car">MORE INFO</button>
+                            <button type="button" class="btn btn-dark btn-runday-car">DOWNLOAD</button>
+
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </section>
         <!--header end-->
         <!--features and icons -->
@@ -100,53 +150,63 @@
         </section>
         <!--features end-->
         <!--first section start - product function -->
-        <section id="features-info">
+        <br>
+        <div class="container">
 
-            <div class="features-info-flex-container">
-                <figure class="feature-info-image"><img src="./img/functions_iko/nav-icon.svg" alt="ikona flagi"
-                                                        class="feature-info-image-size">
-                </figure>
-                <article id="feature1" class="features-info-article">
-                    <h3>Feature 1</h3>
-                    n your github fork, you need to keep your master branch
-                    clean, by clean I mean without any changes, like that you can create at
-                    any time a branch from your master. Each time that you want to commit a
-                    bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
-                </article>
+            <!-- Project One -->
 
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#">
+                        <img class="img-fluid rounded mb-3 mb-md-0" src="img/hero/pexels-photo-297755.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5 center-runday">
+                    <h3>LOCALIZATION</h3>
+                    <p class="text-justify">The RunDay application, thanks to the use of the latest technologies, has the greatest accuracy in showing the current location of the runner. In addition, it is distinguished by a transparent and refined interface. The program uses very little energy, and the dark background is perfect for dark gears. GPS turns on automatically when training begins. In addition, the user can choose the type of plain or satellite map.</p>
+                    <a class="btn-dark btn-runday" href="#">MORE INFO</a>
+                </div>
             </div>
 
-            <div class="features-info-flex-container features-info-flex-container--reversed">
-                <figure class="feature-info-image"><img src="./img/functions_iko/tick.svg" alt="ikona flagi"
-                                                        class="feature-info-image-size">
-                </figure>
-                <article id="feature2" class="features-info-article">
-                    <h3>Feature 2</h3>
-                    n your github fork, you need to keep your master branch
-                    clean, by clean I mean without any changes, like that you can create at
-                    any time a branch from your master. Each time that you want to commit a
-                    bug or a feature, you need to create a branch for it, which will be a copy
-                    of your master branch.
-                </article>
+            <hr>
 
+            <!-- Project Two -->
+            <div class="row">
+                <div class="col-md-5 center-runday">
+                    <h3>LIST OF CHALLENGES</h3>
+                    <p class="text-justify">The application has the ability to create a list of challenges. Through it, the user can manage their goals. The program sends a notification when the goal is reached. To see detailed results, there is no need to log into the portal page, because maps, charts and other training parameters are available in the mobile version.</p>
+                    <a class="btn-runday btn-dark" href="#">MORE INFO</a>
+                </div>
+                <br>
+                <div class="col-md-7">
+                <br>
+                    <a href="#">
+                        <img class="img-fluid rounded mb-3 mb-md-0" src="img/hero/pexels-photo-58457_new.jpg" alt="">
+                    </a>
+                    <br>
+                </div>
+                <br>
+            </div>
+            <br>
+            <hr>
+
+            <!-- Project Three -->
+            <div class="row">
+                <div class="col-md-7">
+                    <a href="#">
+                        <img class="img-fluid rounded mb-3 mb-md-0" src="img/hero/pexels-photo-908298_new.jpg" alt="">
+                    </a>
+                </div>
+                <div class="col-md-5 center-runday">
+                    <h3>CALENDAR</h3>
+                    <p class="text-justify">The user gains access to the multifunctional calendar. Managing calendars is very simple, it allows you to create many events that are independent of each other. Thanks to the integration with social networking sites, it allows you to track your friends' progress in training or share their route or the duration of the training live. In addition, the user can share his photos and general impressions from the completed run.</p>
+                    <a class="btn-runday btn-dark" href="#">MORE INFO</a>
+                </div>
             </div>
 
-            <div class="features-info-flex-container">
-                <figure class="feature-info-image"><img src="./img/functions_iko/calendar.svg" alt="ikona flagi"
-                                                        class="feature-info-image-size">
-                </figure>
-                <article id="feature3" class="features-info-article">
-                    <h3>Feature 3</h3>
-                    n your github fork, you need to keep your master branch
-                    clean, by clean I mean without any changes, like that you can create at
-                    any time a branch from your master. Each time that you want to commit a
-                    bug or a feature, you need to create a branch for it, which will be a copy
-                    of your master branch.
-                </article>
+            <br>
 
-            </div>
-
-        </section>
+        </div>
         <!-- first section end-->
         <!-- post email info -->
         <section id="form-entry">
@@ -208,7 +268,8 @@
                             </div>
                             <input type="hidden" name="from" value="riddik27@o2.pl">
                             <input type="hidden" name="fromName" value="RunDay">
-                            <input type="hidden" name="redirect" value="http://runday.jfddl4.is-academy.pl/email_go.html">
+                            <input type="hidden" name="redirect"
+                                   value="http://runday.jfddl4.is-academy.pl/email_go.html">
                             <div class="text-right">
                                 <input type="submit" id="form-submit" class="btn dark_them_btn" disabled
                                        value="Submit message">
@@ -221,7 +282,7 @@
 
         </section>
         <!-- authors - team information -->
-        <section id="authors" class="bg-light">
+        <section id="authors" class="container bg-light">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <br>
@@ -235,7 +296,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/9.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="img/team/9.jpg" alt="" style="display: none;">
                         <h4>Michał Kozak</h4>
                         <p class="mx-auto text-muted">Junior Frontend Developer</p>
                         <img class="team_img" src="img/team/fb.svg">
@@ -262,7 +323,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/10.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="img/team/10.jpg" alt="" style="display: none;">
                         <h4>Natalia Struk</h4>
                         <p class="text-muted">Junior Frontend Developer</p>
                         <img class="team_img" src="img/team/fb.svg">
@@ -291,7 +352,7 @@
 
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="img/team/11.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="img/team/11.jpg" alt="" style="display: none;">
                         <h4>Paweł Wasil</h4>
                         <p class="text-muted">Junior Frontend Developer</p>
                         <img class="team_img" src="img/team/fb.svg">
@@ -342,9 +403,15 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
 <script src="./js/jQuery/jquery-3.3.1.min.js"></script>
 <script src="./js/bootstrap/bootstrap.bundle.js"></script>
 <script src="./js/nav_scrool.js"></script>
 <script src="./js/private_policy.js"></script>
+<script src="./js/in-view.min.js"></script>
+<script src="./js/animatedPhoto.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/cookieinfo.js"></script>
+<script src="./js/cookieinfo-afterclick.js"></script>
 </body>
 </html>
