@@ -1,3 +1,8 @@
+#features-background{
+    background-image: url("img/shadow.jpg");
+}
+
+}
 .features-info-flex-container {
     display: flex;
     justify-content: center;
@@ -69,9 +74,8 @@
 
 .features-flex-container {
     display: flex;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: space-around;
-
 }
 
 .feature-icon {
@@ -90,7 +94,7 @@
 }
 
 .feature-icon:hover {
-    width: 40%
+    width: 40%;
 }
 
 .feature-figure {
@@ -110,7 +114,6 @@
 
 .feature-link:hover {
     text-decoration: none;
-    color: #ed1c24;
 }
 
 @media screen and (max-width: 500px) {
@@ -118,3 +121,4 @@
         flex-direction: column;
     }
 }
+
