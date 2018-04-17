@@ -1,8 +1,4 @@
-#features-background{
-    background-image: url("img/shadow.jpg");
-}
 
-}
 .features-info-flex-container {
     display: flex;
     justify-content: center;
@@ -74,7 +70,7 @@
 
 .features-flex-container {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 1);
     justify-content: space-around;
 }
 
