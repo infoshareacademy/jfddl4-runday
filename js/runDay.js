@@ -5,13 +5,17 @@
     var _player = null
     var _placePlayerX = 45
     var _placePlayerY = 90
-
+    /*checking element must delete when game will be done*/
+    var _element = null
 
 
     function init() {
         createBoard()
         createPlayer()
         attacListeners()
+        placePlayer(_placePlayerX, _placePlayerY)
+        /*checking element must delete when game will be done*/
+        createEl()
     }
 
     function createBoard() {
@@ -36,7 +40,6 @@
         _gameBoard.appendChild(player)
 
         _player = player
-        placePlayer(_placePlayerX, _placePlayerY)
     }
 
     function placePlayer(x, y) {
@@ -52,27 +55,27 @@
         window.addEventListener('keydown', press, true)
 
         function press(event) {
-            switch (event.keyCode) {
-                case 37:
+            switch (event.key) {
+                case 'ArrowLeft':
                     console.log('left')
                     _placePlayerX -= 5
                     if (_placePlayerX<0)
                         _placePlayerX += 5
                     console.log(_placePlayerX)
-                    createPlayer()
+                    move()
                     break
-                case 39:
+                case 'ArrowRight':
                     _placePlayerX += 5
                     if (_placePlayerX>90)
                         _placePlayerX -= 5
                     console.log(_placePlayerX)
-                    createPlayer()
                     console.log("right")
+                    move()
                     break
-                case 38:
+                case 'ArrowUp':
                     console.log('up')
                     break
-                case 40:
+                case 'ArrowDown':
                     console.log("down")
                     break
             }
@@ -82,8 +85,11 @@
 
 
 
-    function move() {
 
+
+
+    function move() {
+        placePlayer(_placePlayerX, _placePlayerY)
     }
 
     function gameTick() {
@@ -110,6 +116,20 @@
     function endGame() {
 
     }
+/*checking element must delete when game will be done*/
+    function createEl() {
+        var element = document.createElement('div')
+        element.style.position = 'absolute'
+        element.style.width = '10%'
+        element.style.height = '10%'
+        element.style.backgroundColor = 'red'
+        element.style.top = '85%'
+        element.style.left = '30%'
+        _gameBoard.appendChild(element)
+        _element = element
+
+    }
+
 
 
     init()
