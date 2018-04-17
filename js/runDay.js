@@ -47,6 +47,22 @@
         _player.style.left = x + '%'
     }
 
+    function checkSmashEvent(){
+        var playerLeft = parseFloat(_player.style.left)
+        var elementLeft = parseFloat(_element.style.left)
+
+        if (playerLeft == elementLeft + 10
+            || playerLeft+10 == elementLeft){
+            console.warn('crash', playerLeft, elementLeft)
+        }else{
+            console.log('nothing happened', playerLeft, elementLeft)
+        }
+
+    }
+
+
+
+
     function render() {
 
     }
@@ -57,20 +73,18 @@
         function press(event) {
             switch (event.key) {
                 case 'ArrowLeft':
-                    console.log('left')
                     _placePlayerX -= 5
                     if (_placePlayerX<0)
                         _placePlayerX += 5
-                    console.log(_placePlayerX)
                     move()
+                    checkSmashEvent()
                     break
                 case 'ArrowRight':
                     _placePlayerX += 5
                     if (_placePlayerX>90)
                         _placePlayerX -= 5
-                    console.log(_placePlayerX)
-                    console.log("right")
                     move()
+                    checkSmashEvent()
                     break
                 case 'ArrowUp':
                     console.log('up')
