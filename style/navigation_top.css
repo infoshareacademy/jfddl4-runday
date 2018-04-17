@@ -81,5 +81,12 @@
 }
 
 nav.navbar.shrink {
-    height: 35px;
+    height: 40px;
+}
+
+
+nav.navbar.shrink .nav-link.active {
+    border-bottom: none;
+    padding-top: 2px;
+
 }
