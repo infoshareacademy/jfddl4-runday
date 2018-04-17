@@ -22,12 +22,15 @@
 
 .feature-icon:hover {
     width: 40%;
+    border: solid 1px white;
+    border-radius: 10%;
 }
 
 .feature-figure {
     align-items: center;
     color: #ed1c24;
-    font-weight: bold;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 .feature-figure:hover {
@@ -36,7 +39,7 @@
 
 .icon-caption {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .feature-link:hover {
