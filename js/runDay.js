@@ -8,13 +8,14 @@
     function init() {
         createBoard()
         createPlayer()
-        createLoginPage()
+        createStartingPage()
     }
 
-    function createLoginPage() {
-
-
+    function createStartingPage() {
         var login = document.createElement('div')
+        var button = document.createElement('button')
+        var instructions
+
         login.style.position = 'absolute'
         login.style.top = '5%'
         login.style.left = '5%'
@@ -22,17 +23,19 @@
         login.style.height = '90%'
         login.style.backgroundColor = 'rgba(' + 0 + ',' + 0 + ',' + 0 + ', ' + 0.7 + ')';
 
-        var button = document.createElement('button')
         button.style.position = 'absolute'
-        button.style.top = '40%'
+        button.style.top = '60%'
         button.style.left = '30%'
-        button.style.height = '20%'
+        button.style.height = '15%'
         button.style.width = '40%'
         button.style.backgroundColor = 'rgba(' + 237 + ',' + 28 + ',' + 36 + ', ' + 1 + ')';
 
-        _gameBoard.appendChild(login)
-        login.appendChild(button)
+        button.addEventListener('click', function () {
+            // HERE GOES FUNCTION STARTING THE GAME
+        })
 
+        login.appendChild(button)
+        _gameBoard.appendChild(login)
     }
 
     function createBoard() {
