@@ -22,14 +22,16 @@
         login.style.height = '90%'
         login.style.backgroundColor = 'rgba(' + 0 + ',' + 0 + ',' + 0 + ', ' + 0.7 + ')';
 
-        var form = document.createElement('form')
-        form.style.height = ('10%')
-        form.style.width = ('30%')
-        form.style.backgroundColor = ('blue')
+        var button = document.createElement('button')
+        button.style.position = 'absolute'
+        button.style.top = '40%'
+        button.style.left = '30%'
+        button.style.height = '20%'
+        button.style.width = '40%'
+        button.style.backgroundColor = 'rgba(' + 237 + ',' + 28 + ',' + 36 + ', ' + 1 + ')';
 
         _gameBoard.appendChild(login)
-        login.appendChild(form)
-
+        login.appendChild(button)
 
     }
 
