@@ -47,20 +47,22 @@
         _player.style.left = x + '%'
     }
 
-    function checkSmashEvent(){
+    function checkSmashEvent() {
         var playerLeft = parseFloat(_player.style.left)
         var elementLeft = parseFloat(_element.style.left)
+        var playerTop = parseFloat(_player.style.top)
+        var elementTop = parseFloat(_element.style.top)
 
-        if (playerLeft == elementLeft + 10
-            || playerLeft+10 == elementLeft){
-            console.warn('crash', playerLeft, elementLeft)
-        }else{
-            console.log('nothing happened', playerLeft, elementLeft)
+        if (elementLeft >= playerLeft && elementLeft < playerLeft + 10 && elementTop + 10 > playerTop
+            ||
+            elementLeft + 10 > playerLeft && elementLeft + 10 <= playerLeft + 10 && elementTop + 10 > playerTop
+        ) {
+            console.warn('crash', playerTop, elementTop+10)
+        } else {
+            console.log('nothing happened', playerTop, elementTop+10)
         }
 
     }
-
-
 
 
     function render() {
@@ -74,14 +76,14 @@
             switch (event.key) {
                 case 'ArrowLeft':
                     _placePlayerX -= 5
-                    if (_placePlayerX<0)
+                    if (_placePlayerX < 0)
                         _placePlayerX += 5
                     move()
                     checkSmashEvent()
                     break
                 case 'ArrowRight':
                     _placePlayerX += 5
-                    if (_placePlayerX>90)
+                    if (_placePlayerX > 90)
                         _placePlayerX -= 5
                     move()
                     checkSmashEvent()
@@ -96,10 +98,6 @@
 
         }
     }
-
-
-
-
 
 
     function move() {
@@ -130,20 +128,20 @@
     function endGame() {
 
     }
-/*checking element must delete when game will be done*/
+
+    /*checking element must delete when game will be done*/
     function createEl() {
         var element = document.createElement('div')
         element.style.position = 'absolute'
         element.style.width = '10%'
         element.style.height = '10%'
         element.style.backgroundColor = 'red'
-        element.style.top = '85%'
+        element.style.top = '81%'
         element.style.left = '30%'
         _gameBoard.appendChild(element)
         _element = element
 
     }
-
 
 
     init()
