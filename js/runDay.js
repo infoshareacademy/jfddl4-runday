@@ -188,7 +188,12 @@
     function button (){
         var divButton = document.createElement('div')
         var buttonStart = document.createElement('button')
+        var buttonHome = document.createElement('button')
+        var buttonResults = document.createElement('button')
+
         divButton.appendChild(buttonStart);
+        divButton.appendChild(buttonHome)
+        divButton.appendChild(buttonResults)
         buttonStart.style.width = '20vh'
         buttonStart.style.height = '5vh'
         buttonStart.style.backgroundColor = 'white'
@@ -197,8 +202,28 @@
         buttonStart.innerText='START'
         buttonStart.style.fontSize='20px'
         buttonStart.style.display=''
+
+        buttonHome.style.width = '20vh'
+        buttonHome.style.height = '5vh'
+        buttonHome.style.backgroundColor = 'white'
+        buttonHome.style.border='1px solid black'
+        buttonHome.style.borderRadius='5px'
+        buttonHome.innerText='RESULTS'
+        buttonHome.style.fontSize='20px'
+        buttonHome.style.display=''
+        buttonHome.style.marginLeft='10px'
+
+        buttonResults.style.width = '20vh'
+        buttonResults.style.height = '5vh'
+        buttonResults.style.backgroundColor = 'white'
+        buttonResults.style.border='1px solid black'
+        buttonResults.style.borderRadius='5px'
+        buttonResults.innerText='HOME'
+        buttonResults.style.fontSize='20px'
+        buttonResults.style.display=''
+        buttonResults.style.marginLeft='10px'
         _instructionContainer.appendChild(divButton)
-        console.log(divButton)
+
     }
 
     function textInstruction(){
