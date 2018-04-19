@@ -18,7 +18,7 @@
         attacListeners()
         placePlayer(_placePlayerX, _placePlayerY)
         /*checking element must delete when game will be done*/
-        //createEl()
+
         createFallingElement()
         decTime(_time)
 
@@ -97,21 +97,34 @@
         _player.style.left = x + '%'
     }
 
-    function checkSmashEvent() {
+    function tempcheck() {
         var eachElement = document.querySelectorAll('.element')
+
+        for (var i = 0; i<eachElement.length; i++) {
+            var element = eachElement[i];
+
+            checkSmashEvent(element);
+        }
+
+
+    }
+
+    function checkSmashEvent(element) {
 
 
         var playerLeft = parseFloat(_player.style.left)
-        var elementLeft = parseFloat(_element.style.left)
+        var elementLeft = parseFloat(element.style.left)
         var playerTop = parseFloat(_player.style.top)
-        var elementTop = parseFloat(_element.style.top)
+        var elementTop = parseFloat(element.style.top)
 
-        if (elementLeft - playerLeft <10 && playerLeft - elementLeft<40 && elementTop + 10 > playerTop)
+        console.log(elementTop, playerTop);
+
+        if (elementLeft - playerLeft <10 && playerLeft - elementLeft<40 && elementTop + 10 < playerTop)
             {
             console.warn('crash')
 
         } else {
-
+            console.warn('none')
         }
 
     }
@@ -131,14 +144,16 @@
                     if (_placePlayerX < 0)
                         _placePlayerX += 5
                     move()
-                    checkSmashEvent()
+                    // checkSmashEvent()
+                    tempcheck()
                     break
                 case 'ArrowRight':
                     _placePlayerX += 5
                     if (_placePlayerX > 90)
                         _placePlayerX -= 5
                     move()
-                    checkSmashEvent()
+
+                    tempcheck()
                     break
                 case 'ArrowUp':
                     console.log('up')
@@ -200,18 +215,6 @@
     }
 
 
-    /*checking element must delete when game will be done*/
-    function createEl() {
-        var element = document.createElement('div')
-        element.style.position = 'absolute'
-        element.style.width = '40%'
-        element.style.height = '10%'
-        element.style.backgroundColor = 'red'
-        element.style.top = '81%'
-        element.style.left = '30%'
-        _gameBoard.appendChild(element)
-        _element = element
-    }
 
     init()
 })()
