@@ -18,7 +18,7 @@
         attacListeners()
         placePlayer(_placePlayerX, _placePlayerY)
         /*checking element must delete when game will be done*/
-        createEl()
+        //createEl()
         createFallingElement()
         decTime(_time)
 
@@ -39,8 +39,8 @@
 
     function createPlayer() {
         var player = document.createElement('div')
-        player.style.position ='absolute'
-        player.style.width= '10%'
+        player.style.position = 'absolute'
+        player.style.width = '10%'
         player.style.height = '10%'
         player.style.backgroundColor = 'black'
         _gameBoard.appendChild(player)
@@ -48,27 +48,29 @@
         _player = player
         placePlayer(45, 90)
     }
+
 //START MICHAŁ
 
     function createFallingElement() {
-        function removeElement(){
+        function removeElement() {
             fallingElement.remove()
         }
+
         var fallingElement = document.createElement('div')
-        fallingElement.style.position='absolute'
-        fallingElement.style.width='10%'
-        fallingElement.style.height='10%'
-        fallingElement.style.backgroundColor='red'
-        fallingElement.style.transition='all 2s ease-in'
+        fallingElement.style.position = 'absolute'
+        fallingElement.style.width = '40%'
+        fallingElement.style.height = '10%'
+        fallingElement.style.backgroundColor = 'red'
+        fallingElement.style.transition = 'all 2s ease-in'
         _gameBoard.appendChild(fallingElement)
         _fallingElement = fallingElement
 
         placeFallingElement()
 
-        setTimeout(removeElement,3000)
+        setTimeout(removeElement, 3000)
 
-        function transformElement(){
-            fallingElement.style.transform='translate(0, 72vh)'
+        function transformElement() {
+            fallingElement.style.transform = 'translate(0, 72vh)'
         }
 
         setTimeout(transformElement, 1000)
@@ -80,16 +82,15 @@
     function placeFallingElement() {
 
 
-
-        var elemPosY = Math.floor(Math.random()*90)
-
+        var elemPosY = Math.floor(Math.random() * 60)
 
 
         _fallingElement.style.left = elemPosY + '%'
     }
+
 //END MICHAŁ
 
-    function placePlayer(x, y){
+    function placePlayer(x, y) {
         _player.style.top = y + '%'
         _player.style.left = x + '%'
     }
@@ -104,9 +105,9 @@
             ||
             elementLeft + 10 > playerLeft && elementLeft + 10 <= playerLeft + 10 && elementTop + 10 > playerTop
         ) {
-            console.warn('crash', playerTop, elementTop+10)
+            console.warn('crash', playerTop, elementTop + 10)
         } else {
-            console.log('nothing happened', playerTop, elementTop+10)
+            console.log('nothing happened', playerTop, elementTop + 10)
         }
 
     }
@@ -143,69 +144,68 @@
                     break
             }
 
-    }
+        }}
 
-    function move() {
-        placePlayer(_placePlayerX, _placePlayerY)
-    }
-
-    function gameTick() {
-
-    }
-
-
-    function incScore() {
-
-    }
-
-    function displayScore() {
-
-    }
-
-    var getInterval = setInterval(reduceTime, 1000)
-
-
-    function decTime(timeparam) {
-        var timeContainer = document.createElement('div')
-        _timeContainer = timeContainer
-        timeContainer.classList.add('time')
-        _gameBoard.appendChild(timeContainer)
-        timeContainer.style.position='absolute'
-        timeContainer.style.right='10%'
-        timeContainer.style.top='10%'
-        timeContainer.style.fontSize='40px'
-        timeContainer.style.color='white'
-
-    }
-
-    function displayTIme() {
-
-    function reduceTime() {
-        _time++
-        _timeContainer.innerText='Your time: ' + _time;
-        if (_time===0){
-            clearInterval(getInterval)
+        function move() {
+            placePlayer(_placePlayerX, _placePlayerY)
         }
-    }
 
-    function endGame() {
+        function gameTick() {
 
-    }
-
-    /*checking element must delete when game will be done*/
-    function createEl() {
-        var element = document.createElement('div')
-        element.style.position = 'absolute'
-        element.style.width = '10%'
-        element.style.height = '10%'
-        element.style.backgroundColor = 'red'
-        element.style.top = '81%'
-        element.style.left = '30%'
-        _gameBoard.appendChild(element)
-        _element = element
-
-    }
+        }
 
 
-    init()
-})()
+        function incScore() {
+
+        }
+
+        function displayScore() {
+
+        }
+
+        var getInterval = setInterval(reduceTime, 1000)
+
+
+        function decTime(timeparam) {
+            var timeContainer = document.createElement('div')
+            _timeContainer = timeContainer
+            timeContainer.classList.add('time')
+            _gameBoard.appendChild(timeContainer)
+            timeContainer.style.position = 'absolute'
+            timeContainer.style.right = '10%'
+            timeContainer.style.top = '10%'
+            timeContainer.style.fontSize = '40px'
+            timeContainer.style.color = 'white'
+
+        }
+
+        function displayTIme() {}
+
+            function reduceTime() {
+                _time++
+                _timeContainer.innerText = 'Your time: ' + _time;
+                if (_time === 0) {
+                    clearInterval(getInterval)
+                }
+            }
+
+
+        function endGame() {
+        }
+
+
+        /*checking element must delete when game will be done*/
+        function createEl() {
+            var element = document.createElement('div')
+            element.style.position = 'absolute'
+            element.style.width = '10%'
+            element.style.height = '10%'
+            element.style.backgroundColor = 'red'
+            element.style.top = '81%'
+            element.style.left = '30%'
+            _gameBoard.appendChild(element)
+            _element = element
+        }
+
+        init()
+    } )()
