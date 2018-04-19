@@ -146,4 +146,99 @@
 
     init()
 
+})();
+
+
+
+(function y() {
+
+
+    var _instruction = document.body
+    var _instructionContainer = null
+
+
+
+    function init() {
+        instructionContainer()
+        textOther()
+        textInstruction()
+        button()
+
+    }
+
+    function instructionContainer (){
+        var instructionContainer = document.createElement('div')
+        instructionContainer.style.position = 'relative'
+        instructionContainer.style.width = '80vh'
+        instructionContainer.style.height = '80vh'
+        instructionContainer.style.margin = '20px auto'
+        instructionContainer.style.border = '3px solid black'
+        instructionContainer.style.borderRadius='5px'
+        instructionContainer.style.display='flex';
+        instructionContainer.style.justifyContent='center';
+        instructionContainer.style.alignItems='center';
+        instructionContainer.style.flexDirection='column'
+
+
+        _instruction.appendChild(instructionContainer)
+        console.log(instructionContainer)
+        _instructionContainer = instructionContainer
+    }
+
+    function button (){
+        var divButton = document.createElement('div')
+        var buttonStart = document.createElement('button')
+        divButton.appendChild(buttonStart);
+        buttonStart.style.width = '20vh'
+        buttonStart.style.height = '5vh'
+        buttonStart.style.backgroundColor = 'white'
+        buttonStart.style.border='1px solid black'
+        buttonStart.style.borderRadius='5px'
+        buttonStart.innerText='START'
+        buttonStart.style.fontSize='20px'
+        buttonStart.style.display=''
+        _instructionContainer.appendChild(divButton)
+        console.log(divButton)
+    }
+
+    function textInstruction(){
+        var textArea = document.createElement('div')
+        var textInstruction = document.createElement('p')
+        textArea.appendChild(textInstruction)
+        _instructionContainer.appendChild(textArea)
+        textArea.style.width = '60vh'
+        textArea.style.height = '30vh'
+        textArea.style.margin = '10px'
+        textArea.style.backgroundColor='white'
+        textArea.style.border='1px solid black'
+        textArea.style.borderRadius='5px'
+        textInstruction.innerText='Thank you for leaving the email. Now a challenge is waiting for you. The game is to avoid obstacles, you can move left and right using the arrows. The player has three lives. Experience as long as possible and sign up on the pages of history.\n' +
+            '\n' +
+            'Clicking start activates the board. ' +
+            '\n' +
+            '\n' +
+            'Good luck! \ '
+        textInstruction.style.fontSize='20px'
+        textInstruction.style.textAlign='justify'
+        textInstruction.style.padding='10px'
+    }
+
+    function textOther(){
+        var textOther = document.createElement('p')
+        var textOtherSecond = document.createElement('p')
+        _instructionContainer.appendChild(textOther)
+        _instructionContainer.appendChild(textOtherSecond)
+        textOther.innerText='RUNDAY GAME'
+        textOther.style.fontSize='50px'
+        textOtherSecond.innerText='INSTRUCTION'
+        textOtherSecond.style.fontSize='40px'
+        textOtherSecond.style.margin='0'
+        textOtherSecond.style.paddingTop='0px'
+        textOther.style.margin='0'
+    }
+
+
+    init()
+
 })()
+
