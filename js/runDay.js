@@ -13,6 +13,8 @@ function game() {
         createPlayer()
         createFallingElement()
         decTime(_time)
+        life()
+
 
 
 
@@ -50,9 +52,10 @@ function game() {
         }
         var fallingElement = document.createElement('div')
         fallingElement.style.position='absolute'
+        fallingElement.style.top='0'
         fallingElement.style.width='10%'
         fallingElement.style.height='10%'
-        fallingElement.style.backgroundColor='red'
+        fallingElement.style.backgroundColor='black'
         fallingElement.style.transition='all 2s ease-in'
         _gameBoard.appendChild(fallingElement)
         _fallingElement = fallingElement
@@ -75,12 +78,44 @@ function game() {
 
 
 
-        var elemPosY = Math.floor(Math.random()*90)
+        var elemPosY = Math.floor(Math.random()*90+1)
 
 
 
         _fallingElement.style.left = elemPosY + '%'
     }
+
+    function life() {
+        var lifeContainer = document.createElement('div')
+        var lifeFirst = document.createElement('span')
+        var lifeSecond = document.createElement('span')
+        var lifeThird = document.createElement('span')
+        lifeContainer.appendChild(lifeFirst)
+        lifeContainer.appendChild(lifeSecond)
+        lifeContainer.appendChild(lifeThird)
+        _gameBoard.appendChild(lifeContainer)
+        console.log(lifeContainer)
+        lifeFirst.style.position='absolute'
+        lifeFirst.style.top='85px'
+        lifeFirst.style.left='50px'
+        lifeFirst.style.zIndex='99999999'
+        lifeFirst.innerHTML='<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
+        lifeSecond.style.position='absolute'
+        lifeSecond.style.top='85px'
+        lifeSecond.style.left='130px'
+        lifeSecond.style.zIndex='99999999'
+        lifeSecond.innerHTML='<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
+        lifeThird.style.position='absolute'
+        lifeThird.style.top='90px'
+        lifeThird.style.left='210px'
+        lifeThird.style.zIndex='99999999'
+        lifeThird.innerHTML='<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
+
+        console.log(lifeContainer)
+
+
+    }
+
 //END MICHAŁ
 
     function placePlayer(x, y){
@@ -125,14 +160,23 @@ function game() {
         timeContainer.style.right='10%'
         timeContainer.style.top='10%'
         timeContainer.style.fontSize='40px'
-        timeContainer.style.color='white'
+        timeContainer.style.color='black'
+        timeContainer.style.zIndex='99999999'
+        timeContainer.style.backgroundColor='white'
+        timeContainer.style.width='70px'
+        timeContainer.style.height='70px'
+        timeContainer.style.display='flex'
+        timeContainer.style.alignItems='center'
+        timeContainer.style.justifyContent='center'
+        timeContainer.style.borderRadius='100%'
+        timeContainer.style.border="3px solid red"
 
     }
 
 
     function reduceTime() {
         _time++
-        _timeContainer.innerText='Your time: ' + _time;
+        _timeContainer.innerHTML= _time;
         if (_time===0){
             clearInterval(getInterval)
         }
@@ -192,7 +236,7 @@ function game() {
 
         _instruction.appendChild(instructionContainer)
 
-        console.log(instructionContainer)
+
         _instructionContainer = instructionContainer
 
     }
