@@ -105,7 +105,7 @@ function game() {
         lifeSecond.style.zIndex='99999999'
         lifeSecond.innerHTML='<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
         lifeThird.style.position='absolute'
-        lifeThird.style.top='90px'
+        lifeThird.style.top='85px'
         lifeThird.style.left='210px'
         lifeThird.style.zIndex='99999999'
         lifeThird.innerHTML='<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
