@@ -22,6 +22,7 @@
         createFallingElement()
         decTime(_time)
 
+        checking()
     }
 
     function createBoard() {
@@ -72,7 +73,7 @@
         setTimeout(removeElement, 3000)
 
         function transformElement() {
-            fallingElement.style.transform = 'translate(0, 72vh)'
+            fallingElement.style.transform = 'translate(0, 80vh)'
         }
 
         setTimeout(transformElement, 1000)
@@ -106,25 +107,31 @@
             checkSmashEvent(element);
         }
 
-
     }
+
+ function checking (){
+        window.setInterval(tempcheck, 10)
+ }
 
     function checkSmashEvent(element) {
 
-
         var playerLeft = parseFloat(_player.style.left)
         var elementLeft = parseFloat(element.style.left)
-        var playerTop = parseFloat(_player.style.top)
-        var elementTop = parseFloat(element.style.top)
+        var playerTop = _player.offsetTop
+        var playerHeight = _gameBoard.offsetWidth * .1
 
-        console.log(elementTop, playerTop);
+        var elementTop = element.getBoundingClientRect().top + playerHeight
 
-        if (elementLeft - playerLeft <10 && playerLeft - elementLeft<40 && elementTop + 10 < playerTop)
+
+
+        if (elementLeft - playerLeft <10 && playerLeft - elementLeft<40 && elementTop > playerTop)
             {
-            console.warn('crash')
+                element.remove()
+                console.log(elementTop, playerTop)
+                alert()
 
         } else {
-            console.warn('none')
+            // console.warn('none')
         }
 
     }
@@ -144,8 +151,7 @@
                     if (_placePlayerX < 0)
                         _placePlayerX += 5
                     move()
-                    // checkSmashEvent()
-                    tempcheck()
+
                     break
                 case 'ArrowRight':
                     _placePlayerX += 5
@@ -153,7 +159,6 @@
                         _placePlayerX -= 5
                     move()
 
-                    tempcheck()
                     break
                 case 'ArrowUp':
                     console.log('up')
