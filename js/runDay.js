@@ -94,7 +94,6 @@ function game() {
         lifeContainer.appendChild(lifeSecond)
         lifeContainer.appendChild(lifeThird)
         _gameBoard.appendChild(lifeContainer)
-        console.log(lifeContainer)
         lifeFirst.style.position='absolute'
         lifeFirst.style.top='85px'
         lifeFirst.style.left='50px'
@@ -110,8 +109,6 @@ function game() {
         lifeThird.style.left='210px'
         lifeThird.style.zIndex='99999999'
         lifeThird.innerHTML='<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
-
-        console.log(lifeContainer)
 
 
     }
