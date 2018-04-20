@@ -1,4 +1,4 @@
-(function x() {
+function game() {
 
     var _gameContainer = document.body
     var _gameBoard = null
@@ -21,6 +21,8 @@
 
         createFallingElement()
         decTime(_time)
+        life()
+
 
         checking()
     }
@@ -59,18 +61,20 @@
         }
 
         var fallingElement = document.createElement('div')
+        fallingElement.classList.add('element')
         fallingElement.style.position = 'absolute'
+        fallingElement.style.top = '0'
         fallingElement.style.width = '40%'
         fallingElement.style.height = '10%'
         fallingElement.style.backgroundColor = 'red'
-        fallingElement.style.transition = 'all 2s ease-in'
-        fallingElement.classList.add('element')
+        fallingElement.style.transition = 'all 3s ease-in'
         _gameBoard.appendChild(fallingElement)
         _fallingElement = fallingElement
 
         placeFallingElement()
 
-        setTimeout(removeElement, 3000)
+
+        setTimeout(removeElement, 4000)
 
         function transformElement() {
             fallingElement.style.transform = 'translate(0, 80vh)'
@@ -91,6 +95,34 @@
         _fallingElement.style.left = elemPosY + '%'
     }
 
+    function life() {
+        var lifeContainer = document.createElement('div')
+        var lifeFirst = document.createElement('span')
+        var lifeSecond = document.createElement('span')
+        var lifeThird = document.createElement('span')
+        lifeContainer.appendChild(lifeFirst)
+        lifeContainer.appendChild(lifeSecond)
+        lifeContainer.appendChild(lifeThird)
+        _gameBoard.appendChild(lifeContainer)
+        lifeFirst.style.position = 'absolute'
+        lifeFirst.style.top = '85px'
+        lifeFirst.style.left = '50px'
+        lifeFirst.style.zIndex = '99999999'
+        lifeFirst.innerHTML = '<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
+        lifeSecond.style.position = 'absolute'
+        lifeSecond.style.top = '85px'
+        lifeSecond.style.left = '130px'
+        lifeSecond.style.zIndex = '99999999'
+        lifeSecond.innerHTML = '<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
+        lifeThird.style.position = 'absolute'
+        lifeThird.style.top = '85px'
+        lifeThird.style.left = '210px'
+        lifeThird.style.zIndex = '99999999'
+        lifeThird.innerHTML = '<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
+
+
+    }
+
 //END MICHAŁ
 
     function placePlayer(x, y) {
@@ -101,20 +133,18 @@
     function tempcheck() {
         var eachElement = document.querySelectorAll('.element')
 
-        for (var i = 0; i<eachElement.length; i++) {
+        for (var i = 0; i < eachElement.length; i++) {
             var element = eachElement[i];
-
             checkSmashEvent(element);
         }
 
     }
 
- function checking (){
+    function checking() {
         window.setInterval(tempcheck, 10)
- }
+    }
 
     function checkSmashEvent(element) {
-
         var playerLeft = parseFloat(_player.style.left)
         var elementLeft = parseFloat(element.style.left)
         var playerTop = _player.offsetTop
@@ -123,12 +153,10 @@
         var elementTop = element.getBoundingClientRect().top + playerHeight
 
 
-
-        if (elementLeft - playerLeft <10 && playerLeft - elementLeft<40 && elementTop > playerTop)
-            {
-                element.remove()
-                console.log(elementTop, playerTop)
-                alert()
+        if (elementLeft - playerLeft < 10 && playerLeft - elementLeft < 40 && elementTop > playerTop) {
+            element.remove()
+            console.log(elementTop, playerTop)
+            alert()
 
         } else {
             // console.warn('none')
@@ -136,10 +164,6 @@
 
     }
 
-
-    function render() {
-
-    }
 
     function attacListeners() {
         window.addEventListener('keydown', press, true)
@@ -151,7 +175,6 @@
                     if (_placePlayerX < 0)
                         _placePlayerX += 5
                     move()
-
                     break
                 case 'ArrowRight':
                     _placePlayerX += 5
@@ -175,18 +198,6 @@
         placePlayer(_placePlayerX, _placePlayerY)
     }
 
-    function gameTick() {
-
-    }
-
-
-    function incScore() {
-
-    }
-
-    function displayScore() {
-
-    }
 
     var getInterval = setInterval(reduceTime, 1000)
 
@@ -200,26 +211,170 @@
         timeContainer.style.right = '10%'
         timeContainer.style.top = '10%'
         timeContainer.style.fontSize = '40px'
-        timeContainer.style.color = 'white'
+        timeContainer.style.color = 'black'
+        timeContainer.style.zIndex = '99999999'
+        timeContainer.style.backgroundColor = 'white'
+        timeContainer.style.width = '70px'
+        timeContainer.style.height = '70px'
+        timeContainer.style.display = 'flex'
+        timeContainer.style.alignItems = 'center'
+        timeContainer.style.justifyContent = 'center'
+        timeContainer.style.borderRadius = '100%'
+        timeContainer.style.border = "3px solid red"
 
     }
 
-    function displayTIme() {
-    }
 
     function reduceTime() {
         _time++
-        _timeContainer.innerText = 'Your time: ' + _time;
-        if (_time === 0) {
-            clearInterval(getInterval)
-        }
+        _timeContainer.innerHTML = _time;
+
     }
-
-
-    function endGame() {
-    }
-
 
 
     init()
+
+
+}
+
+(function y() {
+
+
+    var _instruction = document.body
+    var _instructionContainer = null
+    var _buttonStart = null
+
+
+    function init() {
+        instructionContainer()
+        textOther()
+        textInstruction()
+        button()
+
+
+    }
+
+    function instructionContainer() {
+        var instructionContainer = document.createElement('div')
+        instructionContainer.style.position = 'relative'
+        instructionContainer.style.width = '80vh'
+        instructionContainer.style.height = '80vh'
+        instructionContainer.style.margin = '20px auto'
+        instructionContainer.style.border = '3px solid black'
+        instructionContainer.style.borderRadius = '5px'
+        instructionContainer.style.display = 'flex';
+        instructionContainer.style.justifyContent = 'center';
+        instructionContainer.style.alignItems = 'center';
+        instructionContainer.style.flexDirection = 'column'
+        instructionContainer.style.backgroundImage = "url('img/woman_run.jpg')"
+        instructionContainer.style.backgroundAttachment = 'fixed'
+        instructionContainer.style.backgroundPosition = 'center'
+
+
+        _instruction.appendChild(instructionContainer)
+
+
+        _instructionContainer = instructionContainer
+
+    }
+
+    function button() {
+        var divButton = document.createElement('div')
+        var buttonStart = document.createElement('button')
+        var buttonHome = document.createElement('button')
+        var buttonResults = document.createElement('button')
+
+        divButton.appendChild(buttonStart);
+        divButton.appendChild(buttonHome)
+        divButton.appendChild(buttonResults)
+        buttonStart.style.width = '15vh'
+        buttonStart.style.height = '5vh'
+        buttonStart.style.backgroundColor = 'white'
+        buttonStart.style.border = '1px solid black'
+        buttonStart.style.borderRadius = '5px'
+        buttonStart.innerText = 'START'
+        buttonStart.style.fontSize = '20px'
+        buttonStart.style.display = ''
+
+        buttonHome.style.width = '15vh'
+        buttonHome.style.height = '5vh'
+        buttonHome.style.backgroundColor = 'white'
+        buttonHome.style.border = '1px solid black'
+        buttonHome.style.borderRadius = '5px'
+        buttonHome.innerText = 'RESULTS'
+        buttonHome.style.fontSize = '20px'
+        buttonHome.style.display = ''
+        buttonHome.style.marginLeft = '10px'
+
+        buttonResults.style.width = '15vh'
+        buttonResults.style.height = '5vh'
+        buttonResults.style.backgroundColor = 'white'
+        buttonResults.style.border = '1px solid black'
+        buttonResults.style.borderRadius = '5px'
+        buttonResults.innerText = 'HOME'
+        buttonResults.style.fontSize = '20px'
+        buttonResults.style.display = ''
+        buttonResults.style.marginLeft = '10px'
+        _instructionContainer.appendChild(divButton)
+
+        _buttonStart = buttonStart
+
+        buttonStart.addEventListener('click', function () {
+            game()
+            _instruction.removeChild(_instructionContainer)
+        })
+
+        buttonResults.addEventListener('click', function () {
+            myWindow('index.html')
+
+        })
+
+    }
+
+    function myWindow(url) {
+        const newWindow = window.open(url);
+    }
+
+
+    function textInstruction() {
+        var textArea = document.createElement('div')
+        var textInstruction = document.createElement('p')
+        textArea.appendChild(textInstruction)
+        _instructionContainer.appendChild(textArea)
+        textArea.style.width = '60vh'
+        textArea.style.height = '30vh'
+        textArea.style.margin = '10px'
+        textArea.style.backgroundColor = 'white'
+        textArea.style.border = '1px solid black'
+        textArea.style.borderRadius = '5px'
+        textInstruction.innerText = 'Thank you for leaving the email. Now a challenge is waiting for you. The game is to avoid obstacles, you can move left and right using the arrows. The player has three lives. Experience as long as possible and sign up on the pages of history.\n' +
+            '\n' +
+            'Clicking start activates the board. ' +
+            '\n' +
+            '\n' +
+            'Good luck! \ '
+        textInstruction.style.fontSize = '20px'
+        textInstruction.style.textAlign = 'justify'
+        textInstruction.style.padding = '10px'
+    }
+
+    function textOther() {
+        var textOther = document.createElement('p')
+        var textOtherSecond = document.createElement('p')
+        _instructionContainer.appendChild(textOther)
+        _instructionContainer.appendChild(textOtherSecond)
+        textOther.innerText = 'RUNDAY GAME'
+        textOther.style.fontSize = '50px'
+        textOtherSecond.innerText = 'INSTRUCTION'
+        textOtherSecond.style.fontSize = '40px'
+        textOtherSecond.style.margin = '0'
+        textOtherSecond.style.paddingTop = '0px'
+        textOther.style.margin = '0'
+        textOther.style.fontWeight = 'bold'
+
+    }
+
+
+    init()
+
 })()
