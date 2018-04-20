@@ -18,6 +18,7 @@ function game() {
 
 
 
+
     }
 
     function createBoard() {
@@ -56,13 +57,13 @@ function game() {
         fallingElement.style.width='10%'
         fallingElement.style.height='10%'
         fallingElement.style.backgroundColor='black'
-        fallingElement.style.transition='all 2s ease-in'
+        fallingElement.style.transition='all 3s ease-in'
         _gameBoard.appendChild(fallingElement)
         _fallingElement = fallingElement
 
         placeFallingElement()
 
-        setTimeout(removeElement,3000)
+        setTimeout(removeElement,4000)
 
         function transformElement(){
             fallingElement.style.transform='translate(0, 72vh)'
@@ -70,7 +71,12 @@ function game() {
 
         setTimeout(transformElement, 1000)
 
+
+
     }
+
+
+
 
     setInterval(createFallingElement, 2000);
 
@@ -174,9 +180,7 @@ function game() {
     function reduceTime() {
         _time++
         _timeContainer.innerHTML= _time;
-        if (_time===0){
-            clearInterval(getInterval)
-        }
+
     }
 
     function removeInstruction() {
