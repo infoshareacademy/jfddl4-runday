@@ -1,4 +1,4 @@
-(function x() {
+function game() {
 
     var _gameContainer = document.body
     var _gameBoard = null
@@ -138,6 +138,10 @@
         }
     }
 
+    function removeInstruction() {
+
+    }
+
     function endGame() {
 
 
@@ -146,7 +150,7 @@
 
     init()
 
-})();
+};
 
 
 
@@ -155,6 +159,7 @@
 
     var _instruction = document.body
     var _instructionContainer = null
+    var _buttonStart = null
 
 
 
@@ -163,6 +168,7 @@
         textOther()
         textInstruction()
         button()
+
 
     }
 
@@ -178,11 +184,17 @@
         instructionContainer.style.justifyContent='center';
         instructionContainer.style.alignItems='center';
         instructionContainer.style.flexDirection='column'
+        instructionContainer.style.backgroundImage="url('img/woman_run.jpg')"
+        instructionContainer.style.backgroundAttachment='fixed'
+        instructionContainer.style.backgroundPosition='center'
+
 
 
         _instruction.appendChild(instructionContainer)
+
         console.log(instructionContainer)
         _instructionContainer = instructionContainer
+
     }
 
     function button (){
@@ -194,7 +206,7 @@
         divButton.appendChild(buttonStart);
         divButton.appendChild(buttonHome)
         divButton.appendChild(buttonResults)
-        buttonStart.style.width = '20vh'
+        buttonStart.style.width = '15vh'
         buttonStart.style.height = '5vh'
         buttonStart.style.backgroundColor = 'white'
         buttonStart.style.border='1px solid black'
@@ -203,7 +215,7 @@
         buttonStart.style.fontSize='20px'
         buttonStart.style.display=''
 
-        buttonHome.style.width = '20vh'
+        buttonHome.style.width = '15vh'
         buttonHome.style.height = '5vh'
         buttonHome.style.backgroundColor = 'white'
         buttonHome.style.border='1px solid black'
@@ -213,7 +225,7 @@
         buttonHome.style.display=''
         buttonHome.style.marginLeft='10px'
 
-        buttonResults.style.width = '20vh'
+        buttonResults.style.width = '15vh'
         buttonResults.style.height = '5vh'
         buttonResults.style.backgroundColor = 'white'
         buttonResults.style.border='1px solid black'
@@ -224,7 +236,25 @@
         buttonResults.style.marginLeft='10px'
         _instructionContainer.appendChild(divButton)
 
+        _buttonStart = buttonStart
+
+        buttonStart.addEventListener('click',function () {
+            game()
+            _instruction.removeChild(_instructionContainer)
+        })
+
+        buttonResults.addEventListener('click',function () {
+            myWindow('index.html')
+
+        })
+
     }
+
+    function myWindow(url) {
+        const newWindow = window.open(url);
+    }
+
+
 
     function textInstruction(){
         var textArea = document.createElement('div')
@@ -260,7 +290,11 @@
         textOtherSecond.style.margin='0'
         textOtherSecond.style.paddingTop='0px'
         textOther.style.margin='0'
+        textOther.style.fontWeight='bold'
+
     }
+
+
 
 
     init()
