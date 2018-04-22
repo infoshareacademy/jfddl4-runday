@@ -33,6 +33,11 @@
     border-radius: 0;
 }
 
+.outOfTop_ {
+    display: none;
+}
+
+
 .go_top {
     position: absolute;
     margin-top: 90vh;
@@ -45,6 +50,7 @@
     -webkit-animation: bounce 2s infinite;
     -o-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
+    text-decoration: none;
 }
 
 @-webkit-keyframes bounce {
@@ -78,15 +84,4 @@
         -webkit-transform: translate3d(0, -4px, 0);
         transform: translate3d(0, -4px, 0);
     }
-}
-
-nav.navbar.shrink {
-    height: 40px;
-}
-
-
-nav.navbar.shrink .nav-link.active {
-    border-bottom: none;
-    padding-top: 2px;
-
 }
