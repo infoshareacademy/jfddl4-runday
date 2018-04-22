@@ -36,7 +36,7 @@ function game() {
         board.style.height = '80vh'
         board.style.margin = '0 auto'
         board.style.backgroundImage = "url('img/_images_7')"
-        board.style.backgroundRepeat='no-repeat'
+        board.style.backgroundRepeat = 'no-repeat'
         _gameContainer.appendChild(board)
 
         _gameBoard = board
@@ -50,7 +50,7 @@ function game() {
         //player.style.height = '100px'
         //player.style.top='50px'
         //player.style.backgroundImage = "url('img/player.png')"
-        player.innerHTML='<img style="width: 100px" src="img/runner.png"/>'
+        player.innerHTML = '<img style="width: 100px" src="img/runner.png"/>'
         //player.style.backgroundRepeat='no-repeat'
         player.classList.add('player')
         _gameBoard.appendChild(player)
@@ -71,7 +71,7 @@ function game() {
         fallingElement.style.width = '40%'
         fallingElement.style.height = '10%'
         fallingElement.style.backgroundImage = "url('img/kloda2.png')"
-        fallingElement.style.backgroundRepeat='no-repeat'
+        fallingElement.style.backgroundRepeat = 'no-repeat'
         fallingElement.style.transition = 'all 3s ease-in'
         _gameBoard.appendChild(fallingElement)
         _fallingElement = fallingElement
@@ -235,8 +235,7 @@ function game() {
         var elementTop = element.getBoundingClientRect().top + playerHeight
 
 
-
-        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeFirst &&_lifeSecond === null){
+        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeFirst && _lifeSecond === null) {
             element.remove()
             var life = 5
             console.log(life)
@@ -248,7 +247,7 @@ function game() {
         }
 
 
-        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeSecond &&_lifeThird === null){
+        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeSecond && _lifeThird === null) {
             element.remove()
             var life = 5
             console.log(life)
@@ -528,95 +527,8 @@ function game() {
 
 function end() {
 
-
-    var _instruction = document.body
-    var _instructionContainer = null
-    var _buttonStart = null
-
-
     function init() {
-        instructionContainer()
-        textOther()
-        textInstruction()
-        button()
-
-
-    }
-
-    function instructionContainer() {
-        var instructionContainer = document.createElement('div')
-        instructionContainer.style.position = 'relative'
-        instructionContainer.style.width = '80vh'
-        instructionContainer.style.height = '80vh'
-        instructionContainer.style.margin = '20px auto'
-        instructionContainer.style.border = '3px solid black'
-        instructionContainer.style.borderRadius = '5px'
-        instructionContainer.style.display = 'flex';
-        instructionContainer.style.justifyContent = 'center';
-        instructionContainer.style.alignItems = 'center';
-        instructionContainer.style.flexDirection = 'column'
-        instructionContainer.style.backgroundImage = "url('img/woman_run.jpg')"
-        instructionContainer.style.backgroundAttachment = 'fixed'
-        instructionContainer.style.backgroundPosition = 'center'
-
-
-        _instruction.appendChild(instructionContainer)
-
-
-        _instructionContainer = instructionContainer
-
-    }
-
-    function button() {
-        var divButton = document.createElement('div')
-        var buttonStart = document.createElement('button')
-        var buttonHome = document.createElement('button')
-        var buttonResults = document.createElement('button')
-
-        divButton.appendChild(buttonStart);
-        divButton.appendChild(buttonHome)
-        divButton.appendChild(buttonResults)
-        buttonStart.style.width = '15vh'
-        buttonStart.style.height = '5vh'
-        buttonStart.style.backgroundColor = 'white'
-        buttonStart.style.border = '1px solid black'
-        buttonStart.style.borderRadius = '5px'
-        buttonStart.innerText = 'START'
-        buttonStart.style.fontSize = '20px'
-        buttonStart.style.display = ''
-
-        buttonHome.style.width = '15vh'
-        buttonHome.style.height = '5vh'
-        buttonHome.style.backgroundColor = 'white'
-        buttonHome.style.border = '1px solid black'
-        buttonHome.style.borderRadius = '5px'
-        buttonHome.innerText = 'RESULTS'
-        buttonHome.style.fontSize = '20px'
-        buttonHome.style.display = ''
-        buttonHome.style.marginLeft = '10px'
-
-        buttonResults.style.width = '15vh'
-        buttonResults.style.height = '5vh'
-        buttonResults.style.backgroundColor = 'white'
-        buttonResults.style.border = '1px solid black'
-        buttonResults.style.borderRadius = '5px'
-        buttonResults.innerText = 'HOME'
-        buttonResults.style.fontSize = '20px'
-        buttonResults.style.display = ''
-        buttonResults.style.marginLeft = '10px'
-        _instructionContainer.appendChild(divButton)
-
-        _buttonStart = buttonStart
-
-        buttonStart.addEventListener('click', function () {
-            game()
-            _instruction.removeChild(_instructionContainer)
-        })
-
-        buttonResults.addEventListener('click', function () {
-            myWindow('index.html')
-
-        })
+        showHiScore()
 
     }
 
@@ -624,40 +536,102 @@ function end() {
         const newWindow = window.open(url);
     }
 
+    function showHiScore(newScore) {
+        var currentHiScore = localStorage.getItem('runDayHiScore') || 0
 
-    function textInstruction() {
-        var textArea = document.createElement('div')
-        var textInstruction = document.createElement('p')
-        textArea.appendChild(textInstruction)
-        _instructionContainer.appendChild(textArea)
-        textArea.style.width = '60vh'
-        textArea.style.height = '30vh'
-        textArea.style.margin = '10px'
-        textArea.style.backgroundColor = 'white'
-        textArea.style.border = '1px solid black'
-        textArea.style.borderRadius = '5px'
-        textInstruction.innerText = 'WYNIKI'
-        textInstruction.style.fontSize = '20px'
-        textInstruction.style.textAlign = 'justify'
-        textInstruction.style.padding = '10px'
+        if (newScore > currentHiScore) {
+            localStorage.setItem('runDayHiScore', newScore)
+            currentHiScore = localStorage.getItem('runDayHiScore')
+        }
+
+        var highScoreContainer = document.createElement('div')
+        highScoreContainer.style.position = 'relative'
+        highScoreContainer.style.width = '80vh'
+        highScoreContainer.style.height = '80vh'
+        highScoreContainer.style.margin = '20px auto'
+        highScoreContainer.style.border = '3px solid black'
+        highScoreContainer.style.borderRadius = '5px'
+        highScoreContainer.style.display = 'flex'
+        highScoreContainer.style.justifyContent = 'center'
+        highScoreContainer.style.alignItems = 'center'
+        highScoreContainer.style.backgroundImage = "url('img/woman_run.jpg')"
+        highScoreContainer.style.backgroundAttachment = 'fixed'
+        highScoreContainer.style.backgroundPosition = 'center'
+        highScoreContainer.style.flexDirection = 'column'
+
+        document.body.appendChild(highScoreContainer)
+
+        var hsTextArea = document.createElement('div')
+        var hsTitle = document.createElement('h2')
+        var hsText = document.createElement('p')
+        var hsTextSecondLine = document.createElement('p')
+
+        hsTextArea.style.width = '60vh'
+        hsTextArea.style.height = '30vh'
+        hsTextArea.style.margin = '10px'
+        hsTextArea.style.backgroundColor = 'white'
+        hsTextArea.style.border = '1px solid black'
+        hsTextArea.style.borderRadius = '5px'
+
+        hsText.style.fontSize = '20px'
+        hsText.style.textAlign = 'justify'
+        hsText.style.padding = '10px'
+        hsText.innerText = 'Your score is: ' + newScore
+
+        hsTextSecondLine.style.fontSize = '20px'
+        hsTextSecondLine.style.textAlign = 'justify'
+        hsTextSecondLine.style.padding = '10px'
+        hsTextSecondLine.innerText = ' High score is: ' + currentHiScore
+
+        hsTitle.style.fontSize = '50px'
+        hsTitle.style.textAlign = 'justify'
+        hsTitle.style.padding = '10px'
+        hsTitle.innerText = 'GAME OVER'
+
+        highScoreContainer.appendChild(hsTitle)
+        highScoreContainer.appendChild(hsTextArea)
+        hsTextArea.appendChild(hsText)
+        hsTextArea.appendChild(hsTextSecondLine)
+
+
+        var divButtonHighScore = document.createElement('div')
+        var tryAgainButton = document.createElement('button')
+        var goBackHomeButton = document.createElement('button')
+
+        goBackHomeButton.style.width = '15vh'
+        goBackHomeButton.style.height = '5vh'
+        goBackHomeButton.style.backgroundColor = 'white'
+        goBackHomeButton.style.border = '1px solid black'
+        goBackHomeButton.style.borderRadius = '5px'
+        goBackHomeButton.innerText = 'HOME'
+        goBackHomeButton.style.fontSize = '20px'
+        goBackHomeButton.style.display = ''
+        goBackHomeButton.style.marginLeft = '10px'
+
+        tryAgainButton.style.width = '15vh'
+        tryAgainButton.style.height = '5vh'
+        tryAgainButton.style.backgroundColor = 'white'
+        tryAgainButton.style.border = '1px solid black'
+        tryAgainButton.style.borderRadius = '5px'
+        tryAgainButton.innerText = 'TRY AGAIN'
+        tryAgainButton.style.fontSize = '20px'
+        tryAgainButton.style.display = ''
+        tryAgainButton.style.marginLeft = '10px'
+
+        divButtonHighScore.appendChild(tryAgainButton)
+        divButtonHighScore.appendChild(goBackHomeButton)
+        highScoreContainer.appendChild(divButtonHighScore)
+
+        tryAgainButton.addEventListener('click', function () {
+            game()
+            document.body.removeChild(highScoreContainer)
+        })
+        goBackHomeButton.addEventListener('click', function () {
+            myWindow('index.html')
+
+        })
+
     }
-
-    function textOther() {
-        var textOther = document.createElement('p')
-        var textOtherSecond = document.createElement('p')
-        _instructionContainer.appendChild(textOther)
-        _instructionContainer.appendChild(textOtherSecond)
-        textOther.innerText = 'GAME OVER'
-        textOther.style.fontSize = '50px'
-        textOtherSecond.innerText = 'RESULTS'
-        textOtherSecond.style.fontSize = '40px'
-        textOtherSecond.style.margin = '0'
-        textOtherSecond.style.paddingTop = '0px'
-        textOther.style.margin = '0'
-        textOther.style.fontWeight = 'bold'
-
-    }
-
 
     init()
 

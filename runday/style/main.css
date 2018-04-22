@@ -1,0 +1,35 @@
+/*COLOR PALETE:
+#ed1c24
+#da0f16
+#ebebeb - background
+656565
+ */
+
+/*Fonts area*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Knewave');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+/*  font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Dancing Script', cursive;*/
+
+/*end fonts area*/
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #000000;
+    }
+
+    #container  {
+        width: 100%;
+        z-index:-1;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
