@@ -4,12 +4,16 @@ function game() {
     var _gameBoard = null
     var _player = null
     var _placePlayerX = 45
-    var _placePlayerY = 90
+    var _placePlayerY = 70
     /*checking element must delete when game will be done*/
     var _element = null
     var _fallingElement = null
     var _time = 0
     var _timeContainer = null
+    var _lifeFirst = null
+    var _lifeSecond = null
+    var _lifeThird = null
+    var _lifeContainer = null
 
 
     function init() {
@@ -33,7 +37,8 @@ function game() {
         board.style.width = '80vh'
         board.style.height = '80vh'
         board.style.margin = '0 auto'
-        board.style.backgroundColor = 'green'
+        board.style.backgroundImage = "url('img/_images_7')"
+        board.style.backgroundRepeat='no-repeat'
         _gameContainer.appendChild(board)
 
         _gameBoard = board
@@ -41,11 +46,14 @@ function game() {
     }
 
     function createPlayer() {
-        var player = document.createElement('div')
+        var player = document.createElement('span')
         player.style.position = 'absolute'
-        player.style.width = '10%'
-        player.style.height = '10%'
-        player.style.backgroundColor = 'black'
+        //player.style.width = '100px'
+        //player.style.height = '100px'
+        //player.style.top='50px'
+        //player.style.backgroundImage = "url('img/player.png')"
+        player.innerHTML='<img style="width: 100px" src="img/runner.png"/>'
+        //player.style.backgroundRepeat='no-repeat'
         player.classList.add('player')
         _gameBoard.appendChild(player)
 
@@ -66,7 +74,8 @@ function game() {
         fallingElement.style.top = '0'
         fallingElement.style.width = '40%'
         fallingElement.style.height = '10%'
-        fallingElement.style.backgroundColor = 'red'
+        fallingElement.style.backgroundImage = "url('img/kloda2.png')"
+        fallingElement.style.backgroundRepeat='no-repeat'
         fallingElement.style.transition = 'all 3s ease-in'
         _gameBoard.appendChild(fallingElement)
         _fallingElement = fallingElement
@@ -119,6 +128,10 @@ function game() {
         lifeThird.style.left = '210px'
         lifeThird.style.zIndex = '99999999'
         lifeThird.innerHTML = '<img style="width: 60px" src="img/2000px-Love_Heart_SVG.svg.png"/>'
+        _lifeThird = lifeThird
+        _lifeSecond = lifeSecond
+        _lifeFirst = lifeFirst
+        _lifeContainer = lifeContainer
 
 
     }
@@ -153,14 +166,38 @@ function game() {
         var elementTop = element.getBoundingClientRect().top + playerHeight
 
 
-        if (elementLeft - playerLeft < 10 && playerLeft - elementLeft < 40 && elementTop > playerTop) {
+
+        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeFirst &&_lifeSecond === null){
+            element.remove()
+            var life = 5
+            console.log(life)
+            _lifeContainer.removeChild(_lifeFirst)
+            _lifeFirst = null
+            end()
+            _gameContainer.removeChild(_gameBoard)
+
+        }
+
+
+        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeSecond &&_lifeThird === null){
+            element.remove()
+            var life = 5
+            console.log(life)
+            _lifeContainer.removeChild(_lifeSecond)
+            _lifeSecond = null
+        }
+
+
+        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeThird) {
             element.remove()
             console.log(elementTop, playerTop)
-            alert()
-
-        } else {
-            // console.warn('none')
+            _lifeContainer.removeChild(_lifeThird)
+            _lifeThird = null
+            console.log(_lifeThird)
         }
+
+
+
 
     }
 
@@ -378,3 +415,141 @@ function game() {
     init()
 
 })()
+
+
+function end() {
+
+
+    var _instruction = document.body
+    var _instructionContainer = null
+    var _buttonStart = null
+
+
+    function init() {
+        instructionContainer()
+        textOther()
+        textInstruction()
+        button()
+
+
+    }
+
+    function instructionContainer() {
+        var instructionContainer = document.createElement('div')
+        instructionContainer.style.position = 'relative'
+        instructionContainer.style.width = '80vh'
+        instructionContainer.style.height = '80vh'
+        instructionContainer.style.margin = '20px auto'
+        instructionContainer.style.border = '3px solid black'
+        instructionContainer.style.borderRadius = '5px'
+        instructionContainer.style.display = 'flex';
+        instructionContainer.style.justifyContent = 'center';
+        instructionContainer.style.alignItems = 'center';
+        instructionContainer.style.flexDirection = 'column'
+        instructionContainer.style.backgroundImage = "url('img/woman_run.jpg')"
+        instructionContainer.style.backgroundAttachment = 'fixed'
+        instructionContainer.style.backgroundPosition = 'center'
+
+
+        _instruction.appendChild(instructionContainer)
+
+
+        _instructionContainer = instructionContainer
+
+    }
+
+    function button() {
+        var divButton = document.createElement('div')
+        var buttonStart = document.createElement('button')
+        var buttonHome = document.createElement('button')
+        var buttonResults = document.createElement('button')
+
+        divButton.appendChild(buttonStart);
+        divButton.appendChild(buttonHome)
+        divButton.appendChild(buttonResults)
+        buttonStart.style.width = '15vh'
+        buttonStart.style.height = '5vh'
+        buttonStart.style.backgroundColor = 'white'
+        buttonStart.style.border = '1px solid black'
+        buttonStart.style.borderRadius = '5px'
+        buttonStart.innerText = 'START'
+        buttonStart.style.fontSize = '20px'
+        buttonStart.style.display = ''
+
+        buttonHome.style.width = '15vh'
+        buttonHome.style.height = '5vh'
+        buttonHome.style.backgroundColor = 'white'
+        buttonHome.style.border = '1px solid black'
+        buttonHome.style.borderRadius = '5px'
+        buttonHome.innerText = 'RESULTS'
+        buttonHome.style.fontSize = '20px'
+        buttonHome.style.display = ''
+        buttonHome.style.marginLeft = '10px'
+
+        buttonResults.style.width = '15vh'
+        buttonResults.style.height = '5vh'
+        buttonResults.style.backgroundColor = 'white'
+        buttonResults.style.border = '1px solid black'
+        buttonResults.style.borderRadius = '5px'
+        buttonResults.innerText = 'HOME'
+        buttonResults.style.fontSize = '20px'
+        buttonResults.style.display = ''
+        buttonResults.style.marginLeft = '10px'
+        _instructionContainer.appendChild(divButton)
+
+        _buttonStart = buttonStart
+
+        buttonStart.addEventListener('click', function () {
+            game()
+            _instruction.removeChild(_instructionContainer)
+        })
+
+        buttonResults.addEventListener('click', function () {
+            myWindow('index.html')
+
+        })
+
+    }
+
+    function myWindow(url) {
+        const newWindow = window.open(url);
+    }
+
+
+    function textInstruction() {
+        var textArea = document.createElement('div')
+        var textInstruction = document.createElement('p')
+        textArea.appendChild(textInstruction)
+        _instructionContainer.appendChild(textArea)
+        textArea.style.width = '60vh'
+        textArea.style.height = '30vh'
+        textArea.style.margin = '10px'
+        textArea.style.backgroundColor = 'white'
+        textArea.style.border = '1px solid black'
+        textArea.style.borderRadius = '5px'
+        textInstruction.innerText = 'WYNIKI'
+        textInstruction.style.fontSize = '20px'
+        textInstruction.style.textAlign = 'justify'
+        textInstruction.style.padding = '10px'
+    }
+
+    function textOther() {
+        var textOther = document.createElement('p')
+        var textOtherSecond = document.createElement('p')
+        _instructionContainer.appendChild(textOther)
+        _instructionContainer.appendChild(textOtherSecond)
+        textOther.innerText = 'GAME OVER'
+        textOther.style.fontSize = '50px'
+        textOtherSecond.innerText = 'RESULTS'
+        textOtherSecond.style.fontSize = '40px'
+        textOtherSecond.style.margin = '0'
+        textOtherSecond.style.paddingTop = '0px'
+        textOther.style.margin = '0'
+        textOther.style.fontWeight = 'bold'
+
+    }
+
+
+    init()
+
+}
