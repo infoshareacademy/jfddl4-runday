@@ -172,7 +172,7 @@ function game() {
             console.log(life)
             _lifeContainer.removeChild(_lifeFirst)
             _lifeFirst = null
-            end()
+            end(_time)
             _gameContainer.removeChild(_gameBoard)
 
         }
@@ -413,12 +413,12 @@ function game() {
 
 })()
 
-
-function end() {
+// score (_time) is passed here form checkSmashEvent function when player gets hit and no lifes left
+function end(score) {
 
     function init() {
-        showHiScore()
-
+        // call showHiScore with score passed to end function
+        showHiScore(score)
     }
 
     function myWindow(url) {
