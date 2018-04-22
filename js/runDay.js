@@ -120,7 +120,7 @@ function game() {
 
 
     function placeFallingElementTwo() {
-        var elemPosY = Math.floor(Math.random() * 60)
+        var elemPosY = Math.floor(Math.random() * 65)
         _fallingElementTwo.style.left = elemPosY + '%'
     }
 
@@ -431,7 +431,6 @@ function game() {
         var buttonResults = document.createElement('button')
 
         divButton.appendChild(buttonStart);
-        divButton.appendChild(buttonHome)
         divButton.appendChild(buttonResults)
         buttonStart.style.width = '15vh'
         buttonStart.style.height = '5vh'
