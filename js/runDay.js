@@ -25,6 +25,7 @@ function game() {
 
 
         checking()
+
     }
 
     function createBoard() {
@@ -250,6 +251,7 @@ function game() {
         textOther()
         textInstruction()
         button()
+        showHiScore()
 
 
     }
@@ -371,6 +373,96 @@ function game() {
         textOtherSecond.style.paddingTop = '0px'
         textOther.style.margin = '0'
         textOther.style.fontWeight = 'bold'
+
+    }
+
+    function showHiScore(newScore) {
+        var currentHiScore = localStorage.getItem('runDayHiScore') || 0
+
+        if (newScore > currentHiScore) {
+            localStorage.setItem('runDayHiScore', newScore)
+            currentHiScore = localStorage.getItem('runDayHiScore')
+        }
+
+        var highScoreContainer = document.createElement('div')
+        highScoreContainer.style.position = 'relative'
+        highScoreContainer.style.width = '80vh'
+        highScoreContainer.style.height = '80vh'
+        highScoreContainer.style.margin = '20px auto'
+        highScoreContainer.style.border = '3px solid black'
+        highScoreContainer.style.borderRadius = '5px'
+        highScoreContainer.style.display = 'flex'
+        highScoreContainer.style.justifyContent = 'center'
+        highScoreContainer.style.alignItems = 'center'
+        highScoreContainer.style.backgroundImage = "url('img/woman_run.jpg')"
+        highScoreContainer.style.backgroundAttachment = 'fixed'
+        highScoreContainer.style.backgroundPosition = 'center'
+        highScoreContainer.style.flexDirection = 'column'
+
+        document.body.appendChild(highScoreContainer)
+
+        var hsTextArea = document.createElement('div')
+        var hsTitle = document.createElement('h2')
+        var hsText = document.createElement('p')
+
+        hsTextArea.style.width = '60vh'
+        hsTextArea.style.height = '30vh'
+        hsTextArea.style.margin = '10px'
+        hsTextArea.style.backgroundColor = 'white'
+        hsTextArea.style.border = '1px solid black'
+        hsTextArea.style.borderRadius = '5px'
+
+        hsText.style.fontSize = '20px'
+        hsText.style.textAlign = 'justify'
+        hsText.style.padding = '10px'
+        hsText.innerText = 'Your score is: ' + newScore + ' high score is: ' + currentHiScore
+
+        hsTitle.style.fontSize = '50px'
+        hsTitle.style.textAlign = 'justify'
+        hsTitle.style.padding = '10px'
+        hsTitle.innerText = 'HIGH SCORE'
+
+        highScoreContainer.appendChild(hsTitle)
+        highScoreContainer.appendChild(hsTextArea)
+        hsTextArea.appendChild(hsText)
+
+
+        var divButtonHighScore = document.createElement('div')
+        var tryAgainButton = document.createElement('button')
+        var goBackHomeButton = document.createElement('button')
+
+        goBackHomeButton.style.width = '15vh'
+        goBackHomeButton.style.height = '5vh'
+        goBackHomeButton.style.backgroundColor = 'white'
+        goBackHomeButton.style.border = '1px solid black'
+        goBackHomeButton.style.borderRadius = '5px'
+        goBackHomeButton.innerText = 'HOME'
+        goBackHomeButton.style.fontSize = '20px'
+        goBackHomeButton.style.display = ''
+        goBackHomeButton.style.marginLeft = '10px'
+
+        tryAgainButton.style.width = '15vh'
+        tryAgainButton.style.height = '5vh'
+        tryAgainButton.style.backgroundColor = 'white'
+        tryAgainButton.style.border = '1px solid black'
+        tryAgainButton.style.borderRadius = '5px'
+        tryAgainButton.innerText = 'TRY AGAIN'
+        tryAgainButton.style.fontSize = '20px'
+        tryAgainButton.style.display = ''
+        tryAgainButton.style.marginLeft = '10px'
+
+        divButtonHighScore.appendChild(tryAgainButton)
+        divButtonHighScore.appendChild(goBackHomeButton)
+        highScoreContainer.appendChild(divButtonHighScore)
+
+        tryAgainButton.addEventListener('click', function () {
+            game()
+            _instruction.removeChild(_instructionContainer)
+        })
+        goBackHomeButton.addEventListener('click', function () {
+            myWindow('index.html')
+
+        })
 
     }
 
