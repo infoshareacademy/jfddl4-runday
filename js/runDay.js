@@ -5,9 +5,10 @@ function game() {
     var _player = null
     var _placePlayerX = 45
     var _placePlayerY = 70
-    /*checking element must delete when game will be done*/
     var _element = null
     var _fallingElement = null
+    var _fallingElementTwo = null
+    var _fallingElementThree = null
     var _time = 0
     var _timeContainer = null
     var _lifeFirst = null
@@ -15,19 +16,16 @@ function game() {
     var _lifeThird = null
     var _lifeContainer = null
 
+    console.log(_time)
 
     function init() {
         createBoard()
         createPlayer()
         attacListeners()
         placePlayer(_placePlayerX, _placePlayerY)
-        /*checking element must delete when game will be done*/
-
         createFallingElement()
         decTime(_time)
         life()
-
-
         checking()
     }
 
@@ -61,8 +59,6 @@ function game() {
         placePlayer(45, 90)
     }
 
-//START MICHAŁ
-
     function createFallingElement() {
         function removeElement() {
             fallingElement.remove()
@@ -81,19 +77,95 @@ function game() {
         _fallingElement = fallingElement
 
         placeFallingElement()
+        setTimeout(removeElement, 4000)
+        function transformElement() {
+            fallingElement.style.transform = 'translate(0, 80vh)'
+        }
+        setTimeout(transformElement, 1000)
+    }
+
+    setInterval(createFallingElement, 2000);
+
+    function createFallingElementTwo() {
+        function removeElement() {
+            fallingElementTwo.remove()
+        }
+
+        var fallingElementTwo = document.createElement('div')
+        fallingElementTwo.classList.add('element')
+        fallingElementTwo.style.position = 'absolute'
+        fallingElementTwo.style.top = '0'
+        fallingElementTwo.style.width = '20%'
+        fallingElementTwo.style.height = '10%'
+        fallingElementTwo.style.backgroundImage = "url('img/wolf.png')"
+        fallingElementTwo.style.backgroundRepeat='no-repeat'
+        fallingElementTwo.style.transition = 'all 3s ease-in'
+        _gameBoard.appendChild(fallingElementTwo)
+        _fallingElementTwo = fallingElementTwo
+
+        placeFallingElementTwo()
 
 
         setTimeout(removeElement, 4000)
 
-        function transformElement() {
-            fallingElement.style.transform = 'translate(0, 80vh)'
+        function transformElementTwo() {
+            fallingElementTwo.style.transform = 'translate(0, 80vh)'
         }
 
-        setTimeout(transformElement, 1000)
+        setTimeout(transformElementTwo, 1000)
 
     }
 
-    setInterval(createFallingElement, 2000);
+
+
+
+    function placeFallingElementTwo() {
+        var elemPosY = Math.floor(Math.random() * 60)
+        _fallingElementTwo.style.left = elemPosY + '%'
+    }
+
+    function createFallingElementThree() {
+        function removeElement() {
+            fallingElementThree.remove()
+
+        }
+
+        var fallingElementThree = document.createElement('div')
+        fallingElementThree.classList.add('element')
+        fallingElementThree.style.position = 'absolute'
+        fallingElementThree.style.top = '0'
+        fallingElementThree.style.width = '20%'
+        fallingElementThree.style.height = '10%'
+        //fallingElementThree.style.backgroundImage = "url('img/eks.png')"
+
+        fallingElementThree.innerHTML='<img style="width: 100px" src="img/eks.png"/>'
+
+        fallingElementThree.style.backgroundRepeat='no-repeat'
+        fallingElementThree.style.transition = 'all 3s ease-in'
+        _gameBoard.appendChild(fallingElementThree)
+        _fallingElementThree = fallingElementThree
+
+        placeFallingElementThree()
+
+
+        setTimeout(removeElement, 4000)
+
+        function transformElementThree() {
+            fallingElementThree.style.transform = 'translate(0, 80vh)'
+        }
+
+        setTimeout(transformElementThree, 1000)
+
+    }
+
+    function placeFallingElementThree() {
+
+
+        var elemPosY = Math.floor(Math.random() * 60)
+
+
+        _fallingElementThree.style.left = elemPosY + '%'
+    }
 
     function placeFallingElement() {
 
@@ -133,10 +205,7 @@ function game() {
         _lifeFirst = lifeFirst
         _lifeContainer = lifeContainer
 
-
     }
-
-//END MICHAŁ
 
     function placePlayer(x, y) {
         _player.style.top = y + '%'
@@ -196,11 +265,7 @@ function game() {
             console.log(_lifeThird)
         }
 
-
-
-
     }
-
 
     function attacListeners() {
         window.addEventListener('keydown', press, true)
@@ -265,12 +330,57 @@ function game() {
     function reduceTime() {
         _time++
         _timeContainer.innerHTML = _time;
-
     }
 
+    var _levelShow = null
+
+
+    setTimeout(function () {
+        var showLevel = document.createElement('span')
+        _levelShow = showLevel
+        showLevel.innerText = 'LEVEL 1'
+        showLevel.style.fontSize='20px'
+        showLevel.style.padding='5px'
+        showLevel.style.color = 'white'
+        showLevel.style.textAlign='center'
+        showLevel.style.position='absolute'
+        _gameBoard.appendChild(showLevel)
+    },0)
+
+        setTimeout(level,15000)
+
+        function level () {
+            setInterval(createFallingElementTwo, 4000);
+            _gameBoard.removeChild(_levelShow)
+            var showLevel = document.createElement('span')
+            _levelShow = showLevel
+            showLevel.innerText = 'LEVEL 2'
+            showLevel.style.fontSize='20px'
+            showLevel.style.padding='5px'
+            showLevel.style.color = 'white'
+            showLevel.style.textAlign='center'
+            showLevel.style.position='absolute'
+            _gameBoard.appendChild(showLevel)
+
+        }
+
+    setTimeout(levelThree,30000)
+
+    function levelThree () {
+        setInterval(createFallingElementThree, 4000);
+        _gameBoard.removeChild(_levelShow)
+        var showLevel = document.createElement('span')
+
+        showLevel.innerText = 'LEVEL 3'
+        showLevel.style.fontSize='20px'
+        showLevel.style.color = 'white'
+        showLevel.style.padding='5px'
+        showLevel.style.textAlign='center'
+        showLevel.style.position='absolute'
+        _gameBoard.appendChild(showLevel)
+    }
 
     init()
-
 
 }
 
@@ -410,7 +520,6 @@ function game() {
         textOther.style.fontWeight = 'bold'
 
     }
-
 
     init()
 
