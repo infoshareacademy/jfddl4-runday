@@ -1,0 +1,27 @@
+/*  NAVBAR  */
+#top-nav {
+    box-shadow: 0 0.4em 0.6em 0 rgba(0,0,0,0.70);
+}
+
+.logo-main{
+    max-width: 2em;
+    max-height: 2em;
+    border-radius: 5px;
+    background: #ebebeb;
+
+}
+
+.nav-link {
+    color: #ebebeb;
+}
+.container-fluid{
+    padding: 0;
+}
+.navbar-brand:hover, .nav-link:hover {
+    color: #ed1c24;
+}
+
+.nav-h1 {
+    font-size: 2rem;
+}
+
