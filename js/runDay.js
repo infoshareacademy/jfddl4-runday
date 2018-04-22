@@ -38,7 +38,7 @@ function game() {
         board.style.height = '80vh'
         board.style.margin = '0 auto'
         board.style.backgroundImage = "url('img/_images_7')"
-        board.style.backgroundRepeat='no-repeat'
+        board.style.backgroundRepeat = 'no-repeat'
         _gameContainer.appendChild(board)
 
         _gameBoard = board
@@ -52,7 +52,7 @@ function game() {
         //player.style.height = '100px'
         //player.style.top='50px'
         //player.style.backgroundImage = "url('img/player.png')"
-        player.innerHTML='<img style="width: 100px" src="img/runner.png"/>'
+        player.innerHTML = '<img style="width: 100px" src="img/runner.png"/>'
         //player.style.backgroundRepeat='no-repeat'
         player.classList.add('player')
         _gameBoard.appendChild(player)
@@ -75,7 +75,7 @@ function game() {
         fallingElement.style.width = '40%'
         fallingElement.style.height = '10%'
         fallingElement.style.backgroundImage = "url('img/kloda2.png')"
-        fallingElement.style.backgroundRepeat='no-repeat'
+        fallingElement.style.backgroundRepeat = 'no-repeat'
         fallingElement.style.transition = 'all 3s ease-in'
         _gameBoard.appendChild(fallingElement)
         _fallingElement = fallingElement
@@ -166,8 +166,7 @@ function game() {
         var elementTop = element.getBoundingClientRect().top + playerHeight
 
 
-
-        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeFirst &&_lifeSecond === null){
+        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeFirst && _lifeSecond === null) {
             element.remove()
             var life = 5
             console.log(life)
@@ -179,7 +178,7 @@ function game() {
         }
 
 
-        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeSecond &&_lifeThird === null){
+        if (elementLeft - playerLeft < 15 && playerLeft - elementLeft < 15 && elementTop > playerTop && _lifeSecond && _lifeThird === null) {
             element.remove()
             var life = 5
             console.log(life)
@@ -195,8 +194,6 @@ function game() {
             _lifeThird = null
             console.log(_lifeThird)
         }
-
-
 
 
     }
@@ -419,12 +416,6 @@ function game() {
 
 function end() {
 
-
-    var _instruction = document.body
-    var _instructionContainer = null
-    var _buttonStart = null
-
-
     function init() {
         showHiScore()
 
@@ -462,6 +453,7 @@ function end() {
         var hsTextArea = document.createElement('div')
         var hsTitle = document.createElement('h2')
         var hsText = document.createElement('p')
+        var hsTextSecondLine = document.createElement('p')
 
         hsTextArea.style.width = '60vh'
         hsTextArea.style.height = '30vh'
@@ -473,16 +465,22 @@ function end() {
         hsText.style.fontSize = '20px'
         hsText.style.textAlign = 'justify'
         hsText.style.padding = '10px'
-        hsText.innerText = 'Your score is: ' + newScore + ' high score is: ' + currentHiScore
+        hsText.innerText = 'Your score is: ' + newScore
+
+        hsTextSecondLine.style.fontSize = '20px'
+        hsTextSecondLine.style.textAlign = 'justify'
+        hsTextSecondLine.style.padding = '10px'
+        hsTextSecondLine.innerText = ' High score is: ' + currentHiScore
 
         hsTitle.style.fontSize = '50px'
         hsTitle.style.textAlign = 'justify'
         hsTitle.style.padding = '10px'
-        hsTitle.innerText = 'HIGH SCORE'
+        hsTitle.innerText = 'GAME OVER'
 
         highScoreContainer.appendChild(hsTitle)
         highScoreContainer.appendChild(hsTextArea)
         hsTextArea.appendChild(hsText)
+        hsTextArea.appendChild(hsTextSecondLine)
 
 
         var divButtonHighScore = document.createElement('div')
