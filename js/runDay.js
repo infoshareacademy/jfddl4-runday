@@ -242,7 +242,7 @@ function game() {
             console.log(life)
             _lifeContainer.removeChild(_lifeFirst)
             _lifeFirst = null
-            end()
+            end(_time)
             _gameContainer.removeChild(_gameBoard)
 
         }
@@ -525,10 +525,10 @@ function game() {
 })()
 
 
-function end() {
+function end(score) {
 
     function init() {
-        showHiScore()
+        showHiScore(score)
 
     }
 
