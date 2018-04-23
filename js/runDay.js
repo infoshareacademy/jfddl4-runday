@@ -32,6 +32,7 @@ function game() {
     function createBoard() {
         var board = document.createElement('div')
         board.style.position = 'relative'
+        board.style.overflow = 'hidden'
         board.style.width = '80vh'
         board.style.height = '80vh'
         board.style.margin = '0 auto'
@@ -109,7 +110,7 @@ function game() {
         setTimeout(removeElement, 4000)
 
         function transformElementTwo() {
-            fallingElementTwo.style.transform = 'translate(0, 80vh)'
+            fallingElementTwo.style.transform = 'translate(0, 90vh)'
         }
 
         setTimeout(transformElementTwo, 1000)
@@ -138,7 +139,7 @@ function game() {
         fallingElementThree.style.height = '10%'
         //fallingElementThree.style.backgroundImage = "url('img/eks.png')"
 
-        fallingElementThree.innerHTML='<img style="width: 100px" src="img/eks.png"/>'
+        fallingElementThree.innerHTML='<img style="width: 100%" src="img/eks.png"/>'
 
         fallingElementThree.style.backgroundRepeat='no-repeat'
         fallingElementThree.style.transition = 'all 3s ease-in'
@@ -161,7 +162,7 @@ function game() {
     function placeFallingElementThree() {
 
 
-        var elemPosY = Math.floor(Math.random() * 60)
+        var elemPosY = Math.floor(Math.random() * 80)
 
 
         _fallingElementThree.style.left = elemPosY + '%'
@@ -170,7 +171,7 @@ function game() {
     function placeFallingElement() {
 
 
-        var elemPosY = Math.floor(Math.random() * 60)
+        var elemPosY = Math.floor(Math.random() * 80)
 
 
         _fallingElement.style.left = elemPosY + '%'
