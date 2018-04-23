@@ -40,16 +40,15 @@ $(document).ready(function() {
 $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
         $('.nav-link-home, .nav-link-name, .nav-link-entry, .nav-link-authors').addClass('outOfTop_');
+        $('.nav-h1 ').css({fontSize: '1em'})
+        $('.logo-main').css({width: '1.5em'})
+        $('.navbar').css({height: '70px'})
+
+
     } else {
         $('.nav-link-home, .nav-link-name, .nav-link-entry, .nav-link-authors').removeClass('outOfTop_');
+        $('.nav-h1 ').css({fontSize: '2rem'})
+        $('.logo-main').css({width: '2em'})
+        $('.navbar').css({height: 'auto'})
     }
 });
-
-/*
-$(window).scroll(function() {
-    if ($(document).scrollTop() > 50) {
-        $('#top-nav').css('height', '40px');
-    } else {
-        $('#top-nav').css('height', '70px');
-    }
-});*/

@@ -2,9 +2,7 @@
 #top-nav {
     box-shadow: 0 0.4em 0.6em 0 rgba(0,0,0,0.70);
 }
-.navbar{
-    height: 70px;
-}
+
 .logo-main{
     max-width: 2em;
     max-height: 2em;
